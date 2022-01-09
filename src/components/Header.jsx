@@ -1,24 +1,14 @@
 import { useState } from 'react';
+import { SmallButton } from './Buttons';
+import toogleDarkMode from '../utils/darkMode';
 // @ts-ignore
 import logo from '../logo.png';
 
-// Utils
-function toogleDarkMode () {
-   document.documentElement.classList.toggle('dark');
-   if (localStorage.getItem('theme') === 'dark') {
-      localStorage.setItem('theme', 'light');
-      return '🌚';
-   }
-   else {
-      localStorage.setItem('theme', 'dark');
-      return '🌞';
-   }
-}
 
 // Elements
 function Logo ({ name }) {
    return (
-      <div id="logo" className="flex flex-row items-center w-2/3 cursor-pointer">
+      <div id="logo" className="flex flex-row items-center cursor-pointer">
          <img
             className="
                max-w-[50px]
@@ -28,17 +18,19 @@ function Logo ({ name }) {
             "
             src={ logo }
             alt="Medical logo" />
-         <span className="text-xl dark:text-med-sky font-bold">{ name }</span>
+         <span className="text-xl dark:text-med-sky font-medium">{ name }</span>
       </div>
    );
 }
 
-function Search () {
+function Search ({ extraClass }) {
    return (
-      <div id="search" className="">
+      <div id="search" className={`flex flex-row gap-x-3 ${extraClass}`}>
          <input
             className="
-            px-1.5
+            grow
+            py-2
+            px-3
             dark:bg-[#182d51]
             border-b-2
             focus:border-transparent
@@ -62,15 +54,45 @@ function Search () {
    );
 }
 
-function ButtonTheme () {
+function ButtonTheme ({ extraClass }) {
    const initTheme = (localStorage.getItem('theme') === 'dark') ? '🌞' : '🌚';
    const [theme, setTheme] = useState(initTheme);
    return (
-      <button
-         className="py-2 px-4 bg-med-green rounded-full text-white"
-         onClick={ () => {
-            setTheme(toogleDarkMode());
-         } }>{ theme }</button>
+      <SmallButton extraClass={ extraClass } click={ () => { setTheme(toogleDarkMode()); } }>
+         { theme }
+      </SmallButton>
+   );
+}
+
+function Menu () {
+   const [openMenu, setOpenMenu] = useState(false);
+   return (
+      <>
+         <button
+            className="
+               md:hidden
+               text-2xl
+               text-med-blue
+               dark:text-med-sky
+               font-bold
+            "
+            onClick={ () => { setOpenMenu(open => !open); } }
+         >{ openMenu ? 'X' : '☰' }</button>
+         <nav
+            className={ `${openMenu ? "flex" : "hidden"}
+               absolute top-0 right-0 mt-[75px] py-8 px-6 w-full
+               sm:mr-8 sm:w-2/3 sm:rounded-lg
+               bg-black/20 dark:bg-black/60 backdrop-blur-sm
+               flex-col items-end gap-y-8
+
+               md:relative md:m-0 md:p-0 md:w-fit
+               md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none
+               md:flex md:flex-row md:items-center md:gap-x-8
+            `}>
+            <Search extraClass={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+            <ButtonTheme extraClass={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+         </nav>
+      </>
    );
 }
 
@@ -81,8 +103,10 @@ function Header () {
          className="
          flex
          flex-row
-         justify-around
+         justify-between
          items-center
+         relative
+         p-8
          w-full
          h-[75px]
          bg-white
@@ -93,8 +117,7 @@ function Header () {
          text-med-blue
       ">
          <Logo name="Scales2Care" />
-         <Search />
-         <ButtonTheme />
+         <Menu />
       </header>
    );
 }
