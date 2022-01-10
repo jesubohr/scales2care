@@ -1,12 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import { BannerButton } from "../components/Buttons";
+import LandingHeader from "../components/LandingHeader";
 //@ts-ignore
 import waves from "../waves.png";
-import Header from "../components/Header";
-import { BannerButton } from "../components/Buttons";
 
-function MainView () {
+function Landing () {
+   const navigate = useNavigate();
    return (
       <main className="flex flex-col items-center">
-         <Header />
+         <LandingHeader />
          <h1 className="
             mx-auto
             mt-10
@@ -22,7 +24,7 @@ function MainView () {
          ">
             Las escalas que necesitas en un solo lugar
          </h1>
-         <BannerButton>¡Usar ahora!</BannerButton>
+         <BannerButton click={() => navigate('/app/categories')}>¡Usar ahora!</BannerButton>
          <img
             className="absolute bottom-0 w-full max-h-[210px] dark:brightness-75"
             src={ waves }
@@ -32,4 +34,4 @@ function MainView () {
    );
 }
 
-export default MainView;
+export default Landing;

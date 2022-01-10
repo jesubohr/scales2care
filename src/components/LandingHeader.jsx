@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { SmallButton } from './Buttons';
 import toogleDarkMode from '../utils/darkMode';
 // @ts-ignore
@@ -8,7 +9,7 @@ import logo from '../logo.png';
 // Elements
 function Logo ({ name }) {
    return (
-      <div id="logo" className="flex flex-row items-center cursor-pointer">
+      <NavLink className="flex flex-row items-center cursor-pointer" to="/">
          <img
             className="
                max-w-[50px]
@@ -19,13 +20,13 @@ function Logo ({ name }) {
             src={ logo }
             alt="Medical logo" />
          <span className="text-xl dark:text-med-sky font-medium">{ name }</span>
-      </div>
+      </NavLink>
    );
 }
 
 function Search ({ extraClass }) {
    return (
-      <div id="search" className={`flex flex-row gap-x-3 ${extraClass}`}>
+      <div id="search" className={ `flex flex-row gap-x-3 ${extraClass}` }>
          <input
             className="
             grow
@@ -97,7 +98,7 @@ function Menu () {
 }
 
 // Block
-function Header () {
+function LandingHeader () {
    return (
       <header
          className="
@@ -122,4 +123,4 @@ function Header () {
    );
 }
 
-export default Header;
+export default LandingHeader;

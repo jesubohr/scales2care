@@ -1,9 +1,32 @@
-import MainView from "./views/MainView";
+import { useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { nameTitles, nameScales } from './utils/scales'
+import AppHeader from './components/AppHeader';
+
+function getCurrentPath (pathname) {
+   const paths = pathname
+      .split('/')
+      .filter(path => path !== '')
+      .map(path => path.charAt(0)
+         .toUpperCase()
+         .concat(path.slice(1)));
+   return (paths.length === 1) ? paths[0] : paths[paths.length - 1];
+}
 
 function App () {
+   const { pathname } = useLocation();
+   const currentPath = getCurrentPath(pathname);
+   const navigate = useNavigate();
+   useEffect(() => {
+      if (currentPath === 'App') navigate('/app/categories');
+      if (currentPath === 'Scale') navigate('/app/scales');
+   }, []);
+
+   const scaleId = Number(currentPath);
    return (
       <>
-         <MainView />
+         <AppHeader title={ nameScales[scaleId] || nameTitles[currentPath] } />
+         <Outlet />
       </>
    );
 }
