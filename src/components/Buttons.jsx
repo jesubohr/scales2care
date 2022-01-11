@@ -1,7 +1,7 @@
-function BannerButton ({ click = () => { }, children }) {
+function BannerButton ({ extraClass = "", click = () => { }, children }) {
    return (
       <button
-         className="
+         className={`
             mt-[4.75rem]
             py-4
             px-20
@@ -25,7 +25,9 @@ function BannerButton ({ click = () => { }, children }) {
             [transition-property: transform, box-shadow]
             ease-in-out
             duration-200
-         "
+
+            ${extraClass}
+         `}
          onClick={ click }
       >{ children }</button>
    );
