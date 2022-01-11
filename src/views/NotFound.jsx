@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { BannerButton } from "../components/Buttons";
 import LandingHeader from "../components/LandingHeader";
 //@ts-ignore
-import waves from "../waves.png";
+import waves from "../assets/waves.png";
 
 function NotFound () {
    const navigate = useNavigate()

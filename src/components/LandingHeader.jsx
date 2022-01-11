@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { SmallButton } from './Buttons';
 import toogleDarkMode from '../utils/darkMode';
 // @ts-ignore
-import logo from '../logo.png';
-
+import logo from '../assets/logo.png';
 
 // Elements
 function Logo ({ name }) {
@@ -19,7 +18,7 @@ function Logo ({ name }) {
             "
             src={ logo }
             alt="Medical logo" />
-         <span className="text-xl dark:text-med-sky font-medium">{ name }</span>
+         <span className="text-2xl dark:text-med-sky font-medium">{ name }</span>
       </NavLink>
    );
 }
@@ -50,7 +49,21 @@ function Search ({ extraClass }) {
             type="text"
             placeholder="Buscar una escala"
          />
-         <button>🔎</button>
+         <button className="pt-2 text-med-blue dark:text-med-sky">
+            <svg xmlns="http://www.w3.org/2000/svg"
+               width="32"
+               height="32"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               strokeWidth="2"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+            >
+               <circle cx="11" cy="11" r="8" />
+               <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+         </button>
       </div>
    );
 }
