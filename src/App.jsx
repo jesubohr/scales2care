@@ -17,12 +17,14 @@ function App () {
    const { pathname } = useLocation();
    const currentPath = getCurrentPath(pathname);
    const navigate = useNavigate();
+   const scaleId = Number(currentPath) - 1;
+
    useEffect(() => {
       if (currentPath === 'App') navigate('/app/categories');
       if (currentPath === 'Scale') navigate('/app/scales');
+      if (scaleId <= -1 || scaleId >= 17) navigate('/app/scales');
    }, []);
 
-   const scaleId = Number(currentPath);
    return (
       <>
          <AppHeader title={ nameScales[scaleId] || nameTitles[currentPath] } />
