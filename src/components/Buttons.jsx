@@ -10,9 +10,10 @@ function BannerButton ({ extraClass = "", click = () => { }, children }) {
             sm:px-16
             
             bg-med-green
-            dark:bg-med-green/80
-            text-xl
+            dark:bg-med-green
+            text-2xl
             text-white
+            font-medium
 
             shadow-lg
             shadow-med-green/30
@@ -36,6 +37,7 @@ function BannerButton ({ extraClass = "", click = () => { }, children }) {
 function SmallButton ({ extraClass = "", click = () => { }, children }) {
    return (
       <button
+         aria-label="theme"
          className={ `py-2 px-4 bg-med-green rounded-full text-white ${extraClass}` }
          onClick={ click }
       >{ children }</button>

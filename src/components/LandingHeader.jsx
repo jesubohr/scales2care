@@ -49,7 +49,7 @@ function Search ({ extraClass }) {
             type="text"
             placeholder="Buscar una escala"
          />
-         <button className="pt-2 text-med-blue dark:text-med-sky">
+         <button aria-label="search" className="pt-2 text-med-blue dark:text-med-sky">
             <svg xmlns="http://www.w3.org/2000/svg"
                width="32"
                height="32"
@@ -124,7 +124,7 @@ function LandingHeader () {
          w-full
          h-[75px]
          bg-white
-         dark:bg-[#182d51]
+         dark:bg-[#001B2E]
          border-b-2
          border-med-blue/20
          font-noto

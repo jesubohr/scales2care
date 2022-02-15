@@ -15,7 +15,7 @@ module.exports = {
          colors: {
             'med-blue': '#0F67FF',
             'med-sky': '#00A8FF',
-            'med-green': '#00AD89'
+            'med-green': '#007C63'
          },
          fontFamily: {
             noto: ['Noto Sans', 'ui-sans-serif']

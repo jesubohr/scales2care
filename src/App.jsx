@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { nameTitles, nameScales } from './utils/scales'
+import { nameTitles, nameScales } from './utils/scales';
 import AppHeader from './components/AppHeader';
 
 function getCurrentPath (pathname) {

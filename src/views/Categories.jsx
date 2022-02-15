@@ -1,6 +1,6 @@
 function Categories () {
    return (
-      <main>Categorias</main>
+      <main>Categorías</main>
    );
 }
 

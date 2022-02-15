@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { BannerButton } from "../components/Buttons";
 import LandingHeader from "../components/LandingHeader";
+import ReloadPrompt from "../components/ReloadPrompt";
 //@ts-ignore
 import waves from "../assets/waves.png";
 //@ts-ignore
@@ -43,7 +44,7 @@ function Landing () {
                w-full
                max-h-[210px]
                lg:max-h-[180px]
-               dark:brightness-75
+               dark:brightness-[90%]
             "
             src={ waves }
             alt="Waves image decoration"
@@ -61,6 +62,7 @@ function Landing () {
             src={ accept }
             alt="Accept terms representation"
          />
+         <ReloadPrompt />
       </main>
    );
 }
