@@ -14,21 +14,21 @@ import './index.css';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-   <React.StrictMode>
-      <BrowserRouter>
-         <Routes>
-            <Route path="/" element={ <Landing /> } />
-            <Route path="*" element={ <NotFound /> } />
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={ <Landing /> } />
+                <Route path="*" element={ <NotFound /> } />
 
-            <Route path="app" element={ <App /> }>
-               <Route path="categories" element={ <Categories /> } />
-               <Route path="scales" element={ <Scales /> } />
-               <Route path="scale">
-                  <Route path=":scaleId" element={ <Scale /> } />
-               </Route>
-            </Route>
-         </Routes>
-      </BrowserRouter>
-   </React.StrictMode>,
-   rootElement
+                <Route path="app" element={ <App /> }>
+                    <Route path="categories" element={ <Categories /> } />
+                    <Route path="scales" element={ <Scales /> } />
+                    <Route path="scales">
+                        <Route path=":scaleId" element={ <Scale /> } />
+                    </Route>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>,
+    rootElement
 );

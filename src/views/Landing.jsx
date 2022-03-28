@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { BannerButton } from "../components/Buttons";
 import LandingHeader from "../components/LandingHeader";
-import ReloadPrompt from "../components/ReloadPrompt";
+//import ReloadPrompt from "../components/ReloadPrompt";
 //@ts-ignore
 import waves from "../assets/waves.png";
 //@ts-ignore
 import accept from "../assets/accept-terms.svg";
 
 function Landing () {
-   const navigate = useNavigate();
-   return (
-      <main className="flex flex-col items-center lg:items-start">
-         <LandingHeader />
-         <h1 className="
+    const navigate = useNavigate();
+    return (
+        <main className="h-[90vh] flex flex-col items-center lg:items-start">
+            <LandingHeader />
+            <h1 className="
             mt-10
             w-11/12
             sm:w-4/5
@@ -31,14 +31,14 @@ function Landing () {
             font-noto
             font-bold
          ">
-            Las escalas que necesitas en un solo lugar
-         </h1>
-         <BannerButton
-            extraClass="lg:ml-20 lg:mt-14"
-            click={() => navigate('/app/categories')}
-         >¡Usar ahora!</BannerButton>
-         <img
-            className="
+                Las escalas que necesitas en un solo lugar
+            </h1>
+            <BannerButton
+                extraClass="lg:ml-20 lg:mt-14"
+                click={ () => navigate('/app/categories') }
+            >¡Usar ahora!</BannerButton>
+            <img
+                className="
                absolute
                bottom-0
                w-full
@@ -46,11 +46,11 @@ function Landing () {
                lg:max-h-[180px]
                dark:brightness-[90%]
             "
-            src={ waves }
-            alt="Waves image decoration"
-         />
-         <img
-            className="
+                src={ waves }
+                alt="Waves image decoration"
+            />
+            <img
+                className="
                hidden
                absolute
                right-[1%]
@@ -59,12 +59,12 @@ function Landing () {
                lg:block
                dark:brightness-90
             "
-            src={ accept }
-            alt="Accept terms representation"
-         />
-         <ReloadPrompt />
-      </main>
-   );
+                src={ accept }
+                alt="Accept terms representation"
+            />
+            {/* <ReloadPrompt /> */ }
+        </main>
+    );
 }
 
 export default Landing;
