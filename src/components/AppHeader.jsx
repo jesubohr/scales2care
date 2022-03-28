@@ -1,7 +1,9 @@
+import { useParams, Link } from "react-router-dom";
 import Icon from "./Icon";
 import ThemeButton from "./ThemeButton";
 
 export default function AppHeader () {
+    const isScaleView = (useParams().scaleId) ? true : false;
     return (
         <header className="
             sticky
@@ -27,8 +29,15 @@ export default function AppHeader () {
         "
         >
             <div className="flex items-center gap-8">
-                <Icon icon="menu" />
-                <p className="w-fit text-2xl font-medium">Scales2Care</p>
+                { isScaleView
+                    ? <Link to="/app/scales">
+                        <Icon icon="arrow-left" />
+                      </Link>
+                    : <Icon icon="menu" /> 
+                }
+                <Link to="/">
+                    <p className="w-fit text-2xl font-medium">Scales2Care</p>
+                </Link>
             </div>
             <div className="flex items-center gap-8">
                 <Icon icon="search" />
