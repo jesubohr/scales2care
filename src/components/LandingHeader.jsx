@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { SmallButton } from './Buttons';
 import Icon from './Icon';
-import toogleDarkMode from '../utils/darkMode';
+import ThemeButton from './ThemeButton';
 // @ts-ignore
 import logo from '../assets/logo.png';
 
@@ -24,9 +23,9 @@ function Logo ({ name }) {
     );
 }
 
-function Search ({ extraClass }) {
+function Search ({ className }) {
     return (
-        <div id="search" className={ `flex flex-row gap-x-3 ${extraClass}` }>
+        <div id="search" className={ `flex flex-row gap-x-3 ${className}` }>
             <input
                 className="
             grow
@@ -57,18 +56,7 @@ function Search ({ extraClass }) {
     );
 }
 
-function ButtonTheme ({ extraClass }) {
-    const initTheme = (localStorage.getItem('theme') === 'dark') ? '🌞' : '🌚';
-    const [theme, setTheme] = useState(initTheme);
-    return (
-        <SmallButton extraClass={ extraClass } click={ () => { setTheme(toogleDarkMode()); } }>
-            { theme }
-        </SmallButton>
-    );
-}
-
-function Menu () {
-    const [openMenu, setOpenMenu] = useState(false);
+function Menu ({ openMenu, onClick, children }) {
     return (
         <>
             <button className="
@@ -77,10 +65,9 @@ function Menu () {
                text-med-blue
                dark:text-med-sky
                font-bold"
-                onClick={ () => { setOpenMenu(open => !open); } }
+                onClick={ onClick }
             >{ openMenu ? 'X' : '☰' }</button>
-            <nav
-                className={ `${openMenu ? "flex" : "hidden"}
+            <nav className={ `${openMenu ? "flex" : "hidden"}
                absolute top-0 right-0 mt-[75px] py-8 px-6 w-full
                sm:mr-8 sm:w-2/3 sm:rounded-lg
                bg-black/20 dark:bg-black/60 backdrop-blur-sm
@@ -90,15 +77,15 @@ function Menu () {
                md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none
                md:flex md:flex-row md:items-center md:gap-x-8
             `}>
-                <Search extraClass={ `${openMenu ? "w-full" : ""} md:w-fit` } />
-                <ButtonTheme extraClass={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+                { children }
             </nav>
         </>
     );
 }
 
 // Block
-function LandingHeader () {
+export default function LandingHeader () {
+    const [openMenu, setOpenMenu] = useState(false);
     return (
         <header className="
             flex
@@ -120,9 +107,10 @@ function LandingHeader () {
             text-med-blue
         ">
             <Logo name="Scales2Care" />
-            <Menu />
+            <Menu openMenu={ openMenu } onClick={ () => { setOpenMenu(open => !open); } }>
+                <Search className={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+                <ThemeButton className={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+            </Menu>
         </header>
     );
 }
-
-export default LandingHeader;
