@@ -1,4 +1,5 @@
 import { LinkButton } from "../components/Buttons";
+import MainContent from "../components/MainContent";
 import { nameScales } from "../utils/scales";
 
 export default function Scales () {
@@ -8,7 +9,7 @@ export default function Scales () {
         : "bg-med-blue dark:bg-med-blue";
     }
     return (
-        <main className="flex flex-col items-center p-5">
+        <MainContent className="p-5">
             <h2 className="mb-7 text-gray-800 dark:text-gray-300 text-4xl font-bold md:text-5xl">Lista de Escalas</h2>
             <section className="flex flex-col justify-center gap-5">
                 {
@@ -23,6 +24,6 @@ export default function Scales () {
                     })
                 }
             </section>
-        </main>
+        </MainContent>
     );
 }

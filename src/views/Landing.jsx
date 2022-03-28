@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { BannerButton } from "../components/Buttons";
 import LandingHeader from "../components/LandingHeader";
+import MainContent from "../components/MainContent";
 //import ReloadPrompt from "../components/ReloadPrompt";
 //@ts-ignore
 import waves from "../assets/waves.png";
@@ -10,7 +11,7 @@ import accept from "../assets/accept-terms.svg";
 function Landing () {
     const navigate = useNavigate();
     return (
-        <main className="h-[90vh] flex flex-col items-center lg:items-start">
+        <MainContent className="lg:items-start">
             <LandingHeader />
             <h1 className="
             mt-10
@@ -63,7 +64,7 @@ function Landing () {
                 alt="Accept terms representation"
             />
             {/* <ReloadPrompt /> */ }
-        </main>
+        </MainContent>
     );
 }
 
