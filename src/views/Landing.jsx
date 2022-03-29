@@ -11,7 +11,7 @@ import accept from "../assets/accept-terms.svg";
 function Landing () {
     const navigate = useNavigate();
     return (
-        <MainContent className="lg:items-start">
+        <MainContent className="lg:items-start" landing>
             <LandingHeader />
             <h1 className="
             mt-10

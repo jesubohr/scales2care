@@ -8,7 +8,7 @@ import waves from "../assets/waves.png";
 function NotFound () {
     const navigate = useNavigate();
     return (
-        <MainContent>
+        <MainContent landing>
             <LandingHeader />
             <h1 className="
             mx-auto
