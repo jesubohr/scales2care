@@ -14,7 +14,7 @@ export default function AppHeader () {
             justify-between
             items-center
 
-            p-8
+            px-4 sm:px-6 md:px-8
             w-full
             h-[75px]
 
@@ -28,7 +28,7 @@ export default function AppHeader () {
             font-noto
         "
         >
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-4 md:gap-8">
                 { isScaleView
                     ? <Link to="/app/scales">
                         <Icon icon="arrow-left" />
@@ -39,9 +39,9 @@ export default function AppHeader () {
                     <p className="w-fit text-2xl font-medium">Scales2Care</p>
                 </Link>
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-4 md:gap-8">
                 <Icon icon="search" />
-                <ThemeButton />
+                <ThemeButton className="hidden sm:block" />
             </div>
         </header>
     );

@@ -13,7 +13,7 @@ export default function Categories () {
                 <Category title="Escalas de Riesgo de Infarto" color />
                 <Category title="Escalas de Riesgo de Infarto" />
             </section>
-            <LinkButton href="/app/scales" extraClass="mt-10 max-w-sm bg-med-sky dark:bg-med-sky">Lista Completa</LinkButton>
+            <LinkButton href="/app/scales" className="mt-10 max-w-sm bg-med-sky dark:bg-med-sky">Lista Completa</LinkButton>
         </MainContent>
     );
 }

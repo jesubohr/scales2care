@@ -18,7 +18,7 @@ export default function Scales () {
                             <LinkButton
                                 key={ index }
                                 href={ `/app/scales/${index + 1}` }
-                                extraClass={"py-6 text-3xl " + `${alternateColor(index)}`}
+                                className={"py-4 px-4 sm:px-2 md:py-6 md:px-20 text-base sm:text-2xl md:text-2xl " + `${alternateColor(index)}`}
                             >{ name }</LinkButton>
                         );
                     })

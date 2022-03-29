@@ -16,7 +16,7 @@ function BannerButton ({ extraClass = "", click = () => { }, children }) {
     );
 }
 
-function LinkButton ({ children, extraClass = "", href = "#" }) {
+function LinkButton ({ children, className = "", href = "#" }) {
     const { origin } = window.location;
     const navigate = useNavigate();
     return (
@@ -24,7 +24,7 @@ function LinkButton ({ children, extraClass = "", href = "#" }) {
             className={
                 "py-4 px-20 rounded-full " +
                 "text-2xl text-white dark:text-gray-900 font-medium " +
-                `${extraClass}`
+                `${className}`
             }
             title={`Ir a ${origin}${href}`}
             onClick={ () => { navigate(href) } }

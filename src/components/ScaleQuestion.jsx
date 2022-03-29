@@ -7,7 +7,7 @@ export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
             <ul className="w-fit">
                 { answers.map(({ answer, value }, index) => {
                     return (
-                        <li key={ index } className="flex items-center gap-2 mb-2 text-lg cursor-pointer">
+                        <li key={ index } className="flex items-center gap-2 mb-2 text-base sm:text-lg cursor-pointer">
                             <input
                                 type="radio"
                                 className="
