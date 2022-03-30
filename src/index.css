@@ -3,31 +3,72 @@
 @tailwind utilities;
 
 .ReloadPrompt-container {
-   padding: 0;
-   margin: 0;
-   width: 0;
-   height: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
 }
 .ReloadPrompt-toast {
-   position: fixed;
-   right: 0;
-   bottom: 0;
-   margin: 16px;
-   padding: 12px;
-   border: 1px solid #8885;
-   border-radius: 4px;
-   z-index: 1;
-   text-align: left;
-   box-shadow: 3px 4px 5px 0 #8885;
-   background-color: white;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+    padding: 12px;
+    border: 1px solid #8885;
+    border-radius: 4px;
+    z-index: 1;
+    text-align: left;
+    box-shadow: 3px 4px 5px 0 #8885;
+    background-color: white;
 }
 .ReloadPrompt-toast-message {
-   margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 .ReloadPrompt-toast-button {
-   border: 1px solid #8885;
-   outline: none;
-   margin-right: 5px;
-   border-radius: 2px;
-   padding: 3px 10px;
+    border: 1px solid #8885;
+    outline: none;
+    margin-right: 5px;
+    border-radius: 2px;
+    padding: 3px 10px;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0097e2 #c7c7ff;
+}
+
+html.dark * {
+    scrollbar-width: thin;
+    scrollbar-color: #0b46ac #212141;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #9edfff;
+}
+html.dark *::-webkit-scrollbar-track {
+    background: #062861;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0097e2;
+    border-radius: 20px;
+    border: 3px solid #9edfff;
+}
+html.dark *::-webkit-scrollbar-thumb {
+    background-color: #144497;
+    border-radius: 20px;
+    border: 3px solid #062861;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #17adf8;
+}
+html.dark *::-webkit-scrollbar-thumb:hover {
+    background-color: #0f50c0;
 }
