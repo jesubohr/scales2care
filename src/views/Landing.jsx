@@ -35,7 +35,7 @@ function Landing () {
                 Las escalas que necesitas en un solo lugar
             </h1>
             <BannerButton
-                extraClass="lg:ml-20 lg:mt-14"
+                className="lg:ml-20 lg:mt-14"
                 click={ () => navigate('/app/categories') }
             >¡Usar ahora!</BannerButton>
             <img

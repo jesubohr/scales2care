@@ -8,6 +8,7 @@ import NotFound from "./views/NotFound";
 import App from './App';
 import Scale from "./views/Scale";
 import Scales from "./views/Scales";
+import Category from "./views/Category";
 import Categories from "./views/Categories";
 
 import './index.css';
@@ -22,6 +23,9 @@ ReactDOM.render(
 
                 <Route path="app" element={ <App /> }>
                     <Route path="categories" element={ <Categories /> } />
+                    <Route path="categories">
+                        <Route path=":category" element={ <Category /> } />
+                    </Route>
                     <Route path="scales" element={ <Scales /> } />
                     <Route path="scales">
                         <Route path=":scaleId" element={ <Scale /> } />
