@@ -8,7 +8,7 @@ export default defineConfig({
         react(),
         VitePWA({
             registerType: 'autoUpdate',
-            includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+            includeAssets: ['favicon.svg', 'favicon.ico', 'logo.png', 'waves.png', 'accept-terms.svg', 'robots.txt', 'apple-touch-icon.png'],
             manifest: {
                 name: 'Scales2Care',
                 short_name: 'Scales2Care',
@@ -33,9 +33,6 @@ export default defineConfig({
                     }
                 ]
             },
-            devOptions: {
-                enabled: true
-            }
         })
     ],
     server: {
