@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [
         react(),
-        /* VitePWA({
+        VitePWA({
             registerType: 'autoUpdate',
             includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
             manifest: {
@@ -36,7 +36,7 @@ export default defineConfig({
             devOptions: {
                 enabled: true
             }
-        }) */
+        })
     ],
     server: {
         watch: {

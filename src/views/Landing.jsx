@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { BannerButton } from "../components/Buttons";
 import LandingHeader from "../components/LandingHeader";
 import MainContent from "../components/MainContent";
-//import ReloadPrompt from "../components/ReloadPrompt";
+import ReloadPrompt from "../components/ReloadPrompt";
 //@ts-ignore
 import waves from "../assets/waves.png";
 //@ts-ignore
@@ -63,7 +63,7 @@ function Landing () {
                 src={ accept }
                 alt="Accept terms representation"
             />
-            {/* <ReloadPrompt /> */ }
+            <ReloadPrompt />
         </MainContent>
     );
 }
