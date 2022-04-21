@@ -10,6 +10,7 @@ import Scale from "./views/Scale";
 import Scales from "./views/Scales";
 import Category from "./views/Category";
 import Categories from "./views/Categories";
+import Favorites from "./views/Favorites";
 
 import './index.css';
 
@@ -30,6 +31,7 @@ ReactDOM.render(
                     <Route path="scales">
                         <Route path=":scaleId" element={ <Scale /> } />
                     </Route>
+                    <Route path="favorites" element={ <Favorites /> } />
                 </Route>
             </Routes>
         </BrowserRouter>
