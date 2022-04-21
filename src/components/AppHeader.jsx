@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Icon from "./Icon";
 import ThemeButton from "./ThemeButton";
+import AsideMenu from "./AsideMenu";
 
 export default function AppHeader () {
     const isScaleView = (useParams().scaleId) ? true : false;
+    const [isAsideMenuOpen, setAsideMenuOpen] = useState(true);
     return (
         <header className="
             sticky
@@ -32,8 +35,10 @@ export default function AppHeader () {
                 { isScaleView
                     ? <Link to="/app/scales">
                         <Icon icon="arrow-left" />
-                      </Link>
-                    : <Icon icon="menu" /> 
+                    </Link>
+                    : <div onClick={ () => setAsideMenuOpen(true) }>
+                        <Icon icon="menu" />
+                    </div>
                 }
                 <Link to="/">
                     <p className="w-fit text-2xl font-medium">Scales2Care</p>
@@ -43,6 +48,9 @@ export default function AppHeader () {
                 <Icon icon="search" />
                 <ThemeButton className="hidden sm:block" />
             </div>
+            {
+                isAsideMenuOpen && <AsideMenu closeAsideMenu={ setAsideMenuOpen } />
+            }
         </header>
     );
 }

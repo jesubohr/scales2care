@@ -6,7 +6,8 @@ export default function ScoreVerdict ({ scaleResults, totalScore }) {
             px-5 py-4
             text-gray-800 dark:text-gray-300 
             bg-white/90 dark:bg-[#001B2E]/90
-            gx:rounded-lg gx:shadow-lg gx:dark:shadow-white/10
+            rounded-lg border-4 border-[#001B2E] gx:border-dashed
+            dark:border-white
             ">
             <p className="text-3xl text-center font-bold">Interpretación del puntaje</p>
             <p className="my-4 text-4xl text-center text-medium">{ totalScore }</p>
