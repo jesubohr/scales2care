@@ -1,426 +1,212 @@
 export const lawtonAndBrodyQuestions = [
-  //Habilidad para usar el telefono
   {
-    question: "Opera el teléfono por iniciativa propia; busca y marca números",
+    question: "CAPACIDAD PARA USAR EL TELÉFONO:",
     answers: [
       {
-        answer: "Si",
+        answer: "Utiliza el teléfono por iniciativa propia",
         value: 1,
       },
       {
-        answer: "No",
+        answer: "Es capaz de marcar bien algunos números familiares",
+        value: 1,
+      },
+      {
+        answer: "Es capaz de contestar al teléfono, pero no de marcar",
+        value: 1,
+      },
+      {
+        answer: "No es capaz de usar el teléfono",
         value: 0,
       },
     ],
   },
   {
-    question: "Marca algunos números conocidos",
+    question: "HACER COMPRAS:",
     answers: [
       {
-        answer: "Si",
+        answer: "Realiza todas las compras necesarias independientemente",
         value: 1,
       },
       {
-        answer: "No",
+        answer: "Realiza independientemente pequeñas compras",
+        value: 0,
+      },
+      {
+        answer: "Necesita ir acompañado para hacer cualquier compra",
+        value: 0,
+      },
+      {
+        answer: "Totalmente incapaz de comprar",
         value: 0,
       },
     ],
   },
   {
-    question: "Contesta el teléfono pero no marca ningún número",
+    question: "PREPARACIÓN DE LA COMIDA:",
     answers: [
       {
-        answer: "Si",
+        answer:
+          "Organiza, prepara y sirve las comidas por sí solo adecuadamente",
         value: 1,
       },
       {
-        answer: "No",
+        answer:
+          "Prepara adecuadamente las comidas si se le proporcionan los ingredientes",
+        value: 0,
+      },
+      {
+        answer:
+          "Prepara, calienta y sirve las comidas, pero no sigue una dieta adecuada",
+        value: 0,
+      },
+      {
+        answer: "Necesita que le preparen y sirvan las comidas",
         value: 0,
       },
     ],
   },
   {
-    question: "No usa el teléfono en absoluto",
+    question: "CUIDADO DE LA CASA:",
     answers: [
       {
-        answer: "Si",
+        answer:
+          "Mantiene la casa solo o con ayuda ocasional (para trabajos pesados)",
         value: 1,
       },
       {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  //Compras
-  {
-    question:
-      "Se encarga de todas las necesidades de compra de forma independiente.",
-    answers: [
-      {
-        answer: "Si",
+        answer:
+          "Realiza tareas ligeras, como lavar los platos o hacer las camas",
         value: 1,
       },
       {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Tiendas independientes para compras pequeñas.",
-    answers: [
-      {
-        answer: "Si",
+        answer:
+          "Realiza tareas ligeras, pero no puede mantener un adecuado nivel de limpieza",
         value: 1,
       },
       {
-        answer: "No",
+        answer: "Necesita ayuda en todas las labores de la casa",
+        value: 1,
+      },
+      {
+        answer: "No participa en ninguna labor de la casa",
         value: 0,
       },
     ],
   },
   {
-    question: "Necesita estar acompañado en cualquier viaje de compras.",
+    question: "LAVADO DE LA ROPA:",
     answers: [
       {
-        answer: "Si",
+        answer: "Lava por sí solo toda su ropa",
         value: 1,
       },
       {
-        answer: "No",
+        answer: "Lava por sí solo pequeñas prendas",
+        value: 1,
+      },
+      {
+        answer: "Todo el lavado de ropa debe ser realizado por otro",
         value: 0,
       },
     ],
   },
   {
-    question: "Completamente incapaz de comprar.",
+    question: "USO DE MEDIOS DE TRANSPORTE:",
     answers: [
       {
-        answer: "Si",
+        answer: "Viaja solo en transporte público o conduce su propio coche",
         value: 1,
       },
       {
-        answer: "No",
+        answer:
+          "Es capaz de coger un taxi, pero no usa otro medio de transporte",
+        value: 1,
+      },
+      {
+        answer:
+          "Viaja en transporte público cuando va acompañado por otra persona",
+        value: 1,
+      },
+      {
+        answer: "Solo utiliza el taxi o el automóvil con ayuda de otros",
         value: 0,
       },
-    ],
-  },
-  //Preparacion de comidas
-  {
-    question:
-      "Planifica, prepara y sirve comidas adecuadas de forma independiente.",
-    answers: [
       {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Preparar comidas adecuadas con los ingredientes suministrados.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
+        answer: "No viaja",
         value: 0,
       },
     ],
   },
   {
-    question:
-      "Calienta y sirve comidas preparadas o prepara comidas, pero no mantiene una dieta adecuada.",
+    question: "RESPONSABILIDAD RESPECTO A SU MEDICACIÓN:",
     answers: [
       {
-        answer: "Si",
+        answer:
+          "Es capaz de tomar su medicación a la hora y con la dosis correcta",
         value: 1,
       },
       {
-        answer: "No",
+        answer: "Toma su medicación si la dosis le es preparada previamente",
+        value: 0,
+      },
+      {
+        answer: "No es capaz de administrarse su medicación",
         value: 0,
       },
     ],
   },
   {
-    question: "Necesita tener comidas preparadas y servidas.",
+    question: "MANEJO DE SUS ASUNTOS ECONÓMICOS:",
     answers: [
       {
-        answer: "Si",
+        answer: "Se encarga de sus asuntos económicos por sí solo",
         value: 1,
       },
       {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  //Limpieza de la casa
-  {
-    question:
-      "Mantiene la casa sola con asistencia ocasional (trabajo pesado).",
-    answers: [
-      {
-        answer: "Si",
+        answer:
+          "Realiza las compras de cada día, pero necesita ayuda en las grandes compras, bancos…",
         value: 1,
       },
       {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Realiza tareas diarias livianas como lavar platos, hacer la cama.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Realiza tareas diarias livianas, pero no puede mantener un nivel aceptable de limpieza.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Necesita ayuda con todas las tareas de mantenimiento del hogar.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "No participa en ninguna tarea de limpieza.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  // Lavado de ropa
-  {
-    question: "Lava completamente la ropa personal",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Lava artículos pequeños, enjuaga calcetines, medias, etc.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Toda la ropa debe ser hecha por otros.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  // Transporte
-  {
-    question:
-      "Viaja de forma independiente en transporte público o conduce su propio automóvil.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Organiza sus propios viajes en taxi, pero no usa el transporte público de otra manera.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Viaja en transporte público cuando es asistido o acompañado por otro.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Viajes limitados a taxi o automóvil con asistencia de otros.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "No viaja en absoluto.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  // Responabilidad por sus propios medicamentos
-  {
-    question:
-      "Es responsable de tomar la medicación en las dosis correctas en el momento correcto.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Asume la responsabilidad si el medicamento se prepara con anticipación en dosis separadas.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "No es capaz de dispensar su propia medicación.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  //Habilidad para manejar finanzas
-  {
-    question:
-      "Maneja los asuntos financieros de forma independiente (presupuestos, emite cheques, paga el alquiler y las facturas, va al banco); recopila y realiza un seguimiento de los ingresos.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question:
-      "Gestiona las compras del día a día, pero necesita ayuda con la banca, compras importantes, etc.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
-        value: 0,
-      },
-    ],
-  },
-  {
-    question: "Incapaz de manejar dinero.",
-    answers: [
-      {
-        answer: "Si",
-        value: 1,
-      },
-      {
-        answer: "No",
+        answer: "Incapaz de manejar dinero",
         value: 0,
       },
     ],
   },
 ];
+
+export const lawtonAndBrodyResult = {
+  results: [
+    {
+      min: 0,
+      max: 1,
+      result:
+        "Paciente con dependencia total de acuerdo a la escala Lawton y brody.",
+    },
+    {
+      min: 2,
+      max: 3,
+      result:
+        "Paciente con dependencia grave de acuerdo a la escala Lawton y brody.",
+    },
+    {
+      min: 4,
+      max: 5,
+      result:
+        "Paciente con dependencia moderada de acuerdo a la escala Lawton y brody.",
+    },
+    {
+      min: 6,
+      max: 7,
+      result:
+        "Paciente con dependencia leve de acuerdo a la escala Lawton y brody.",
+    },
+    {
+      min: 8,
+      max: 8,
+      result:
+        "Paciente Autónomo o con independencia total de acuerdo a la escala Lawton y brody.",
+    },
+  ],
+  titles: ["Resultado", "Grado de Dependencia"],
+};
