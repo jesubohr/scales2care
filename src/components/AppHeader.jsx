@@ -6,7 +6,7 @@ import AsideMenu from "./AsideMenu";
 
 export default function AppHeader () {
     const isScaleView = (useParams().scaleId) ? true : false;
-    const [isAsideMenuOpen, setAsideMenuOpen] = useState(true);
+    const [isAsideMenuOpen, setAsideMenuOpen] = useState(false);
     return (
         <header className="
             sticky
