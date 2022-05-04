@@ -1,0 +1,149 @@
+export const hasbledQuestions = [
+  {
+    question: "Accidente cerebrovascular, AIT o embolia sistémica.",
+    answers: [
+      {
+        answer: "Si",
+        value: 2,
+      },
+      {
+        answer: "No",
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: "Hipertensión arterial",
+    answers: [
+      {
+        answer: "Si",
+        value: 1,
+      },
+      {
+        answer: "No",
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: "Diabetes mellitus 2",
+    answers: [
+      {
+        answer: "Si",
+        value: 1,
+      },
+      {
+        answer: "No",
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: "Edad",
+    answers: [
+      {
+        answer: "Edad > 75 años",
+        value: 2,
+      },
+      {
+        answer: "Edad 65-75 años",
+        value: 1,
+      },
+    ],
+  },
+  {
+    question: "Genero",
+    answers: [
+      {
+        answer: "Femenino",
+        value: 1,
+      },
+      {
+        answer: "Masculino",
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: "Insuficiencia cardiaca",
+    answers: [
+      {
+        answer: "Si",
+        value: 1,
+      },
+      {
+        answer: "No",
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: "Enfermedad vascular",
+    answers: [
+      {
+        answer: "Si",
+        value: 1,
+      },
+      {
+        answer: "No",
+        value: 0,
+      },
+    ],
+  },
+];
+
+export const hasbledResults = {
+  results: [
+    {
+      min: 0,
+      max: 0,
+      result: "0",
+    },
+    {
+      min: 1,
+      max: 1,
+      result: "1,3",
+    },
+    {
+      min: 2,
+      max: 2,
+      result: "2,2",
+    },
+    {
+      min: 3,
+      max: 3,
+      result: "3,2",
+    },
+    {
+      min: 4,
+      max: 4,
+      result: "4,0",
+    },
+    {
+      min: 5,
+      max: 5,
+      result: "6,7",
+    },
+    {
+      min: 6,
+      max: 6,
+      result: "9,8",
+    },
+    {
+      min: 7,
+      max: 7,
+      result: "9,6",
+    },
+    {
+      min: 8,
+      max: 8,
+      result: "6,7",
+    },
+    {
+      min: 9,
+      max: 9,
+      result: "15,2",
+    },
+  ],
+  titles: ["Resultado", "Riesgo anual de ACV(%)"],
+};
