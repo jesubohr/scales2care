@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Icon from "./Icon";
+import SearchBar from "./SearchBar";
 import ThemeButton from "./ThemeButton";
 import AsideMenu from "./AsideMenu";
 
@@ -45,7 +46,7 @@ export default function AppHeader () {
                 </Link>
             </div>
             <div className="flex items-center gap-4 md:gap-8">
-                <Icon icon="search" />
+                <SearchBar />
                 <ThemeButton className="hidden sm:block" />
             </div>
             {

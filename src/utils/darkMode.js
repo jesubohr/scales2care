@@ -1,4 +1,4 @@
-function toogleDarkMode () {
+export default function toogleDarkMode () {
    document.documentElement.classList.toggle('dark');
    if (localStorage.getItem('theme') === 'dark') {
       localStorage.setItem('theme', 'light');
@@ -9,5 +9,3 @@ function toogleDarkMode () {
       return '🌞';
    }
 }
-
-export default toogleDarkMode;

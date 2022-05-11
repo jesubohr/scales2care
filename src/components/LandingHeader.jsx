@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import SearchBar from "./SearchBar";
 import Icon from './Icon';
 import ThemeButton from './ThemeButton';
 // @ts-ignore
@@ -108,7 +109,7 @@ export default function LandingHeader () {
         ">
             <Logo name="Scales2Care" />
             <Menu openMenu={ openMenu } onClick={ () => { setOpenMenu(open => !open); } }>
-                <Search className={ `${openMenu ? "w-full" : ""} md:w-fit` } />
+                <SearchBar className={ `${openMenu ? "w-full" : ""} md:w-fit` } />
                 <ThemeButton className={ `${openMenu ? "w-full" : ""} md:w-fit` } />
             </Menu>
         </header>
