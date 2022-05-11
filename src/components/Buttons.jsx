@@ -18,17 +18,19 @@ function BannerButton ({ className = "", click = () => { }, children }) {
     );
 }
 
-function LinkButton ({ children, className = "", href = "#" }) {
+function LinkButton ({ title, className = "", href = "#" }) {
     const navigate = useNavigate();
     return (
         <button
+            type="button"
             className={
-                "py-4 px-20 rounded-full " +
-                "text-2xl text-gray-50 dark:text-gray-900 font-medium " +
+                "py-2 rounded-full " +
+                "bg-med-blue " +
+                "text-gray-50 dark:text-gray-900 font-medium " +
                 `${className}`
             }
             onClick={ () => { navigate(href); } }
-        >{ children }</button>
+        >{ title }</button>
     );
 }
 
@@ -79,4 +81,4 @@ function FavoriteButton ({ id = 0 }) {
     );
 }
 
-export { BannerButton, LinkButton, ScaleButton, FavoriteButton };
+export { BannerButton, LinkButton, ScaleButton };

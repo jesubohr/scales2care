@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { LinkButton } from "./Buttons";
 import Icon from "./Icon";
 
 export default function AsideMenu ({ closeAsideMenu }) {
@@ -36,29 +36,11 @@ export default function AsideMenu ({ closeAsideMenu }) {
                         Menu de Vistas
                     </p>
                 </header>
-                <section className="mt-2 px-1 w-full">
-                    <ul className="flex flex-col items-center gap-y-4">
-                        <li className="flex justify-center items-center w-full py-2 bg-med-blue rounded-full text-white cursor-pointer">
-                            <Link to="/" className="w-full text-lg text-center font-medium">
-                                Inicio
-                            </Link>
-                        </li>
-                        <li className="flex justify-center items-center w-full py-2 bg-med-sky rounded-full text-white cursor-pointer">
-                            <Link to="/app/categories" className="w-full text-lg text-center font-medium">
-                                Categorías
-                            </Link>
-                        </li>
-                        <li className="flex justify-center items-center w-full py-2 bg-med-blue rounded-full text-white cursor-pointer">
-                            <Link to="/app/scales" className="w-full text-lg text-center font-medium">
-                                Escalas
-                            </Link>
-                        </li>
-                        <li className="flex justify-center items-center w-full py-2 bg-med-sky rounded-full text-white cursor-pointer">
-                            <Link to="/app/favorites" className="w-full text-lg text-center font-medium">
-                                Favoritas
-                            </Link>
-                        </li>
-                    </ul>
+                <section className="flex flex-col items-center gap-y-4 mt-2 px-1 w-full">
+                    <LinkButton href="/" title="Inicio" className="w-full text-lg" />
+                    <LinkButton href="/app/categories" title="Categorías" className="w-full bg-med-sky text-lg" />
+                    <LinkButton href="/app/scales" title="Escalas" className="w-full text-lg" />
+                    <LinkButton href="/app/favorites" title="Favoritas" className="w-full bg-med-sky text-lg" />
                 </section>
             </aside>
         </div>
