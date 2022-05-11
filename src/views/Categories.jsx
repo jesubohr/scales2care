@@ -15,7 +15,7 @@ export default function Categories () {
                 <CategoryButton title="Componente Social" color />
                 <CategoryButton title="Componente Triple" />
             </section>
-            <LinkButton href="/app/scales" title="Lista Completa" className="mt-10 py-4 px-20 max-w-sm bg-med-sky dark:bg-med-sky text-2xl" />
+            <LinkButton href="/app/scales" title="Lista Completa" className="mt-10 py-[0.8rem] px-24 max-w-sm bg-med-sky dark:bg-med-sky text-2xl" />
         </MainContent>
     );
 }

@@ -37,9 +37,9 @@ export default function AsideMenu ({ closeAsideMenu }) {
                     </p>
                 </header>
                 <section className="flex flex-col items-center gap-y-4 mt-2 px-1 w-full">
-                    <LinkButton href="/" title="Inicio" className="w-full text-lg" />
+                    <LinkButton href="/" title="Inicio" className="w-full text-lg bg-med-blue" />
                     <LinkButton href="/app/categories" title="Categorías" className="w-full bg-med-sky text-lg" />
-                    <LinkButton href="/app/scales" title="Escalas" className="w-full text-lg" />
+                    <LinkButton href="/app/scales" title="Escalas" className="w-full text-lg bg-med-blue" />
                     <LinkButton href="/app/favorites" title="Favoritas" className="w-full bg-med-sky text-lg" />
                 </section>
             </aside>

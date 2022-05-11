@@ -25,7 +25,6 @@ function LinkButton ({ title, className = "", href = "#" }) {
             type="button"
             className={
                 "py-2 rounded-full " +
-                "bg-med-blue " +
                 "text-gray-50 dark:text-gray-900 font-medium " +
                 `${className}`
             }
