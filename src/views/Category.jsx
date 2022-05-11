@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import MainContent from "../components/MainContent";
-import { LinkButton } from "../components/Buttons";
+import { ScaleButton } from "../components/Buttons";
 import { scalesPerCategory } from "../utils/scales";
 
 export default function Category () {
@@ -36,11 +36,12 @@ export default function Category () {
                 { scalesPerCategory[categoryTitle(category)].map((
                     {scaleName, scaleId}, index) => {
                     return (
-                        <LinkButton
+                        <ScaleButton
                             key={ index }
-                            href={ `/app/scales/${scaleId + 1}` }
-                            className={ "py-4 px-4 sm:px-2 md:py-6 md:px-20 text-base sm:text-2xl md:text-2xl " + `${alternateColor(index)}` }
-                        >{ scaleName }</LinkButton>
+                            id={ scaleId }
+                            name={ scaleName }
+                            className={ alternateColor(index) }
+                        />
                     );
                 }) }
             </section>

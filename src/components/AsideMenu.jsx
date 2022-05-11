@@ -6,21 +6,21 @@ export default function AsideMenu ({ closeAsideMenu }) {
     const [closeAnim, setCloseAnim] = useState(false);
     return (
         <div
-            className={`absolute top-0 left-0 w-full h-screen bg-black/50
+            className={ `absolute top-0 left-0 w-full h-screen bg-black/50
                 transition-opacity delay-300 duration-300
-                ${ closeAnim ? "opacity-0" : "opacity-100" }
+                ${closeAnim ? "opacity-0" : "opacity-100"}
             `}
             onClick={ () => {
                 setCloseAnim(true);
                 setTimeout(() => closeAsideMenu(false), 300);
             } }>
-            <aside className={`absolute top-0 left-0
+            <aside className={ `absolute top-0 left-0
                 flex flex-col items-center
                 w-80 h-screen
                 bg-white dark:bg-[#182d51]
                 dark:text-gray-100
                 transition duration-300
-            ${ closeAnim ? "opacity-0 -translate-x-full" : "opacity-100" }
+            ${closeAnim ? "opacity-0 -translate-x-full" : "opacity-100"}
             `}>
                 <header className="flex items-center py-3 w-full border-b-2 border-gray-100">
                     <button
@@ -40,17 +40,17 @@ export default function AsideMenu ({ closeAsideMenu }) {
                     <ul className="flex flex-col items-center gap-y-4">
                         <li className="flex justify-center items-center w-full py-2 bg-med-blue rounded-full text-white cursor-pointer">
                             <Link to="/" className="w-full text-lg text-center font-medium">
-                                    Inicio
+                                Inicio
                             </Link>
                         </li>
                         <li className="flex justify-center items-center w-full py-2 bg-med-sky rounded-full text-white cursor-pointer">
                             <Link to="/app/categories" className="w-full text-lg text-center font-medium">
-                                    Categorías
+                                Categorías
                             </Link>
                         </li>
                         <li className="flex justify-center items-center w-full py-2 bg-med-blue rounded-full text-white cursor-pointer">
                             <Link to="/app/scales" className="w-full text-lg text-center font-medium">
-                                    Escalas
+                                Escalas
                             </Link>
                         </li>
                         <li className="flex justify-center items-center w-full py-2 bg-med-sky rounded-full text-white cursor-pointer">

@@ -5,19 +5,19 @@ import { nameScales } from "../utils/scales";
 import { Store } from "../utils/localStorage";
 
 export default function Favorites () {
-    const [favoritesScales, setFavoritesScales] = useState(() => {
-        return Store.get("user-favorite-scales") ?? [];
+    const [favoritesScales, _] = useState(() => {
+        return Store.get("user-favorite-scales") || [];
     });
     const alternateColor = (index) => {
         return (index % 2 === 0)
-        ? "bg-med-sky dark:bg-med-sky"
-        : "bg-med-blue dark:bg-med-blue";
-    }
+            ? "bg-med-sky dark:bg-med-sky"
+            : "bg-med-blue dark:bg-med-blue";
+    };
     useEffect(() => {
-        if(Store.get("user-favorite-scales") === null) {
+        if (Store.get("user-favorite-scales") === null) {
             Store.set('user-favorite-scales', []);
         }
-    })
+    });
     return (
         <MainContent>
             <h2 className="mb-7 text-gray-800 dark:text-gray-300 text-4xl font-bold md:text-5xl">Escalas Favoritas</h2>
