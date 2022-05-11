@@ -282,20 +282,23 @@ export const Questions = [
   },
 ];
 
-export const Results = [
-  {
-    min: 24,
-    max: 30,
-    result: "Estado nutricional normal",
-  },
-  {
-    min: 17,
-    max: 23.5,
-    result: "Riesgo de malnutrición",
-  },
-  {
-    min: 0,
-    max: 16.9,
-    result: "Malnutrición",
-  },
-];
+export const Results = {
+  results: [
+    {
+      min: 24,
+      max: 30,
+      result: "Estado nutricional normal",
+    },
+    {
+      min: 17,
+      max: 23.5,
+      result: "Riesgo de malnutrición",
+    },
+    {
+      min: 0,
+      max: 16.9,
+      result: "Malnutrición",
+    },
+  ],
+  titles: ["Resultado", "Riesgo de malnutrición"],
+};

@@ -1,0 +1,132 @@
+{
+  "name": "Edimburgo",
+  "description": "Escala de edimburgo",
+  "sphere": "BIOLOGICO",
+  "questions": [
+    {
+      "question": "¿Siente dolor en alguna pierna al caminar?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 1
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "question": "¿Este dolor también lo siente cuando está de pie o sentado?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 0
+        },
+        {
+          "answer": "No",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "question": "¿Siente dolor en pantorrillas?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 1
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "question": "¿Siente dolor cuando camina cuesta arriba o rápido?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 1
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "question": "¿Siente dolor cuando camina normalmente o sobre una superficie lisa?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 0
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "question": "¿Este dolor desaparece cuando camina?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 0
+        },
+        {
+          "answer": "No",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "question": "¿Qué hace cuando el dolor desaparece?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 0
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "question": "¿Qué sucede con el dolor cuando se detiene?",
+      "answers": [
+        {
+          "answer": "Si",
+          "value": 0
+        },
+        {
+          "answer": "No",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "interpretations": {
+    "results": [
+      {
+        "min": 5,
+        "max": 5,
+        "result": "El paciente tiene alto riesgo de claudicación intermitente."
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "result": "Normal"
+      },
+
+      {
+        "min": 6,
+        "max": 10,
+        "result": "Normal"
+      }
+    ],
+    "titles": ["Resultado", "Riesgo"]
+  }
+}
