@@ -14,7 +14,7 @@ function Scale () {
     const scaleName = nameScales[scaleIndex];
 
     const scaleQuestions = scalesQuestions[scaleIndex] ?? [];
-    const scaleResults = scalesResults[scaleIndex] ?? [];
+    const scaleResults = scalesResults[scaleIndex] ?? {};
 
     const TotalScore = {
         setScaleScore: (qScore) => {
@@ -22,6 +22,11 @@ function Scale () {
             setScores([...filterScores, qScore]);
         }
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [scaleIndex]);
+
     return (
         <MainContent className="py-10 px-5 gx:items-start">
             <h2 className="self-center mb-7 text-center text-gray-800 dark:text-gray-300 text-4xl font-bold">
@@ -29,7 +34,7 @@ function Scale () {
             </h2>
             <section className="flex flex-col gap-y-6 ml-20 max-w-[30rem] w-11/12">
                 <ScaleScoreContext.Provider value={ TotalScore }>
-                    { scaleQuestions.map(({ question, answers }, index) => {
+                    { scaleQuestions.length !== 0 && scaleQuestions.map(({ question, answers }, index) => {
                         return (
                             <ScaleQuestion
                                 key={ index }

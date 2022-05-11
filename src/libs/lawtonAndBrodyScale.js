@@ -175,7 +175,7 @@ export const lawtonAndBrodyQuestions = [
   },
 ];
 
-export const lawtonAndBrodyResult = {
+export const lawtonAndBrodyResults = {
   results: [
     {
       min: 0,

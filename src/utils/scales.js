@@ -1,4 +1,13 @@
 import * as MiniNutricional from "../libs/miniNutricionalScale";
+import * as Barthel from "../libs/barthelScale";
+import * as LawtonBrody from "../libs/lawtonAndBrodyScale";
+import * as Yessavage from "../libs/yesavageScale";
+import * as Gijon from "../libs/gijonScale";
+import * as Edimburgo from "../libs/edimburgoScale";
+import * as Hasbled from "../libs/hasbledScale";
+import * as Padua from "../libs/paduaScale";
+import * as Charlson from "../libs/charlsonScale";
+import * as Morse from "../libs/morseScale";
 
 export const nameScales = [
     'Nutritional Assessment Short Form',
@@ -48,8 +57,40 @@ export const scalesPerCategory = {
 };
 export const scalesResults = [
     MiniNutricional.Results,
+    Barthel.barthelResults,
+    LawtonBrody.lawtonAndBrodyResults,
+    Yessavage.yesavageResults,
+    Gijon.gijonResults,
+    {},
+    Edimburgo.edimburgoResults,
+    {},
+    {},
+    {},
+    Hasbled.hasbledResults,
+    Padua.paduaResults,
+    {},
+    Charlson.charlsonResults,
+    {},
+    {},
+    Morse.morseResults,
 ]
 
 export const scalesQuestions = [
     MiniNutricional.Questions,
+    Barthel.barthelQuestions,
+    LawtonBrody.lawtonAndBrodyQuestions,
+    Yessavage.yesavageQuestions,
+    Gijon.gijonQuestions,
+    [],
+    Edimburgo.edimburgoQuestions,
+    [],
+    [],
+    [],
+    Hasbled.hasbledQuestions,
+    Padua.paduaQuestions,
+    [],
+    Charlson.charlsonQuestions,
+    [],
+    [],
+    Morse.morseQuestions,
 ];

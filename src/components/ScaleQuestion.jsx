@@ -10,10 +10,11 @@ export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
                 { answers.map(({ answer, value }, index) => (
                     <ScaleScoreContext.Consumer key={ index }>
                         { ({ setScaleScore }) => (
-                            <li className="flex items-center gap-2 mb-2 text-base sm:text-lg cursor-pointer">
+                            <li className="mb-2 text-base sm:text-lg cursor-pointer">
+                                <label className="cursor-pointer" htmlFor={ `answer-${qtIndex + 1}-${index + 1}` }>
                                 <input
                                     type="radio"
-                                    className="appearance-none w-4 h-4
+                                    className="appearance-none w-4 h-4 mr-2
                                     rounded-full border-none
                                     ring-2 ring-gray-500
                                     ring-offset-2 ring-offset-white dark:ring-offset-[#001B2E]
@@ -28,8 +29,7 @@ export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
                                             score: Number(target['value']),
                                         });
                                     } }
-                                />
-                                <label className="cursor-pointer" htmlFor={ `answer-${qtIndex + 1}-${index + 1}` }>{ value } - { answer }</label>
+                                /> { value } - { answer }</label>
                             </li>
                         ) }
                     </ScaleScoreContext.Consumer>
