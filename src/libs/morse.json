@@ -1,6 +1,6 @@
 {
   "name": "Morse",
-  "description": "Escala de Morse",
+  "description": "Valoración riesgo de caída.",
   "sphere": "SOCIAL",
   "questions": [
     {

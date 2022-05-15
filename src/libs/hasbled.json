@@ -1,7 +1,7 @@
 {
   "name": "Hasbled",
-  "description": "Escala de hasbled",
-  "sphere": "BIOLOGICO",
+  "description": "Determinación del riesgo de sangrado en pacientes con factores de riesgo.",
+  "sphere": "BIOLOGICA",
   "questions": [
     {
       "question": "Accidente cerebrovascular, AIT o embolia sistémica.",
@@ -148,6 +148,9 @@
         "result": "15,2"
       }
     ],
-    "titles": ["Resultado", "Riesgo anual de ACV(%)"]
+    "titles": [
+      "Resultado",
+      "Riesgo anual de ACV(%)"
+    ]
   }
 }

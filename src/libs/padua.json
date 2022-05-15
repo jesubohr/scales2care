@@ -1,7 +1,7 @@
 {
   "name": "Padua",
-  "description": "Escala de Padua",
-  "sphere": "SOCIAL",
+  "description": "Riesgo de enfermedad trombótica en pacientes con comorbilidades, no quirurgicos y no críticos.",
+  "sphere": "BIOLOGICA",
   "questions": [
     {
       "question": "Cáncer activo (metástasis local o distante en quienes se ha realizado quimioterapia los últimos 6 meses)",
@@ -160,6 +160,9 @@
         "result": "Se identificó riesgo alto de tromboembolismo venoso según puntuación de la escala Padua"
       }
     ],
-    "titles": ["Resultado", "Riesgo"]
+    "titles": [
+      "Resultado",
+      "Riesgo"
+    ]
   }
 }

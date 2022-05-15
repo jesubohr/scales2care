@@ -1,7 +1,7 @@
 {
   "name": "Mini Nutricional",
-  "description": "Escala de Mini Nutricional",
-  "sphere": "SOCIAL",
+  "description": "Riesgo de mal nutrición.",
+  "sphere": "BIOLOGICA",
   "questions": [
     {
       "question": "¿Ha perdido el apetito? ¿Ha comido menos por falta de apetito, problemas digestivos, dificultades de masticación o deglución en los últimos 3 meses?",

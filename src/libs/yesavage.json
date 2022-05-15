@@ -1,7 +1,7 @@
 {
   "name": "Yesavage",
-  "description": "Escala de Yesavage",
-  "sphere": "SOCIAL",
+  "description": "Riesgo de depresión en población geriatrica.",
+  "sphere": "PSICOLOGICA O MENTAL",
   "questions": [
     {
       "question": "¿Está básicamente satisfecho con su vida?",
@@ -217,6 +217,9 @@
         "result": ""
       }
     ],
-    "titles": ["Resultado", "Depresión"]
+    "titles": [
+      "Resultado",
+      "Depresión"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Gijon",
-  "description": "Escala de gijon",
-  "sphere": "BIOLOGICO",
+  "description": "Determinación de riesgo social en el adulto mayor.",
+  "sphere": "SOCIAL",
   "questions": [
     {
       "question": "SITUACIÓN FAMILIAR",

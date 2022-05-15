@@ -1,7 +1,7 @@
 {
   "name": "Lawton y Brody",
-  "description": "Escala de Lawton y Brody",
-  "sphere": "SOCIAL",
+  "description": "Valoración funcional de la realización de actividades instrumentales de la vida diaria.",
+  "sphere": "BIOPSICOSOCIAL",
   "questions": [
     {
       "question": "CAPACIDAD PARA USAR EL TELÉFONO:",

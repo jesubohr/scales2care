@@ -1,7 +1,7 @@
 {
   "name": "Edimburgo",
-  "description": "Escala de edimburgo",
-  "sphere": "BIOLOGICO",
+  "description": "Diagnóstico de claudicación intermitente.",
+  "sphere": "BIOLOGICA",
   "questions": [
     {
       "question": "¿Siente dolor en alguna pierna al caminar?",
@@ -119,14 +119,8 @@
         "min": 0,
         "max": 4,
         "result": "Normal"
-      },
-
-      {
-        "min": 6,
-        "max": 10,
-        "result": "Normal"
       }
     ],
-    "titles": ["Resultado", "Riesgo"]
+    "titles": ["Resultado", "Diagnóstico de claudicación Intermitente"]
   }
 }

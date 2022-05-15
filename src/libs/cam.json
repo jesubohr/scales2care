@@ -1,0 +1,152 @@
+{
+    "name": "CAM",
+    "description": "Riesgo de Delirium.",
+    "sphere": "PSICOLOGICA O MENTAL",
+    "questions": [
+        {
+            "Comienzo agudo": [
+                {
+                    "question": "¿Existe evidencia de un cambio agudo en el estado mental en relación con el estado basal?",
+                    "answers": [
+                        {
+                            "answer": "Sí",
+                            "value": 5
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "question": "¿Ha fluctuado el comportamiento (anormal) en las últimas 24 horas?",
+                    "answers": [
+                        {
+                            "answer": "Sí",
+                            "value": 5
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                }
+            ],
+            "Inatención": [
+                {
+                    "question": "Atención visual.",
+                    "answers": [
+                        {
+                            "answer": "Sí",
+                            "value": 1
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "question": "Atención auditiva.",
+                    "answers": [
+                        {
+                            "answer": "Sí",
+                            "value": 1
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "question": "¿Podría flotar una piedra en el agua?",
+                    "answers": [
+                        {
+                            "answer": "Sí",
+                            "value": 1
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                }
+            ],
+            "Pensamiento desorganizado": [
+                {
+                    "question": "¿Existen peces en el mar?",
+                    "answers": [
+                        {
+                            "answer": "Si",
+                            "value": 0
+                        },
+                        {
+                            "answer": "No",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "question": "¿Pesa más 1 libra que 2 libras?",
+                    "answers": [
+                        {
+                            "answer": "Si",
+                            "value": 1
+                        },
+                        {
+                            "answer": "No",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "question": "¿Se puede usar un martillo para pegarle a un clavo?",
+                    "answers": [
+                        {
+                            "answer": "Si",
+                            "value": 0
+                        },
+                        {
+                            "answer": "No",
+                            "value": 1
+                        }
+                    ]
+                }
+            ],
+            "Alteración del nivel de conciencia": [
+                {
+                    "question": "¿Está alterado el nivel de conciencia del paciente?",
+                    "answers": [
+                        {
+                            "answer": "Si",
+                            "value": 0
+                        },
+                        {
+                            "answer": "No",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "interpretations": {
+        "results": [
+            {
+                "min": 5,
+                "max": 6,
+                "result": "Se identificó riesgo alto de Delirium"
+            },
+            {
+                "min": 0,
+                "max": 4,
+                "result": "Se identificó riesgo de Delirium"
+            }
+        ],
+        "titles": [
+            "Resultado",
+            "Riesgo de Delirium"
+        ]
+    }
+}

@@ -1,13 +1,13 @@
 {
   "name": "Charlson",
-  "description": "Escala de charlson",
-  "sphere": "BIOLOGICO",
+  "description": "Riesgo de mortalidad asociado a comorbilidades.",
+  "sphere": "BIOLOGICA",
   "questions": [
     {
       "question": "Infarto del miocardio",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -20,7 +20,7 @@
       "question": "Insuficiencia cardiaca congestiva",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -33,7 +33,7 @@
       "question": "Enfermedad vascular periférica",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -46,7 +46,7 @@
       "question": "Enfermedad vascular cerebral (excepto hemiplejías)",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -59,7 +59,7 @@
       "question": "Demencia",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -72,7 +72,7 @@
       "question": "Enfermedad Pulmonar Crónica",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -85,7 +85,7 @@
       "question": "Enfermedad del tejido Conectivo",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -98,7 +98,7 @@
       "question": "Enfermedad ulcerosa",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -111,7 +111,7 @@
       "question": "Enfermedad hepática leve",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 1
         },
         {
@@ -137,7 +137,7 @@
       "question": "Hemiplejía",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 2
         },
         {
@@ -150,7 +150,7 @@
       "question": "Enfermedad renal (moderada o grave)",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 2
         },
         {
@@ -163,7 +163,7 @@
       "question": "Tumor solido secundario (no metastático)",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 2
         },
         {
@@ -176,7 +176,7 @@
       "question": "Leucemia",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 2
         },
         {
@@ -189,7 +189,7 @@
       "question": "Linfoma-Mieloma multiple",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 2
         },
         {
@@ -202,7 +202,7 @@
       "question": "Enfermedad hepatica moderada o severa",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 3
         },
         {
@@ -215,7 +215,7 @@
       "question": "Tumor sólido secundario metastático",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 6
         },
         {
@@ -228,7 +228,7 @@
       "question": "HIV",
       "answers": [
         {
-          "answer": "Si",
+          "answer": "Sí",
           "value": 6
         },
         {
