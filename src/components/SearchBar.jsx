@@ -49,6 +49,8 @@ export default function SearchBar ({ className = "" }) {
                     dark:outline-med-sky
                     dark:text-med-sky
                     font-medium
+                    w-full md:w-auto
+                    rounded-lg
                 "
             />
             <ul id="search-results" ref={ searchResults } className={

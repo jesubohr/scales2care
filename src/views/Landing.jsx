@@ -8,12 +8,13 @@ import waves from "../assets/waves.png";
 //@ts-ignore
 import accept from "../assets/accept-terms.svg";
 
-function Landing () {
-    const navigate = useNavigate();
-    return (
-        <MainContent className="lg:items-start" landing>
-            <LandingHeader />
-            <h1 className="
+function Landing() {
+  const navigate = useNavigate();
+  return (
+    <MainContent className="lg:items-start" landing>
+      <LandingHeader />
+      <h1
+        className="
             mt-10
             w-11/12
             sm:w-4/5
@@ -29,17 +30,20 @@ function Landing () {
             text-center
             text-med-blue
             dark:text-med-sky
-            font-noto
+            font-poppins
             font-bold
-         ">
-                Las escalas que necesitas en un solo lugar
-            </h1>
-            <BannerButton
-                className="lg:ml-20 lg:mt-14"
-                click={ () => navigate('/app/categories') }
-            >¡Usar ahora!</BannerButton>
-            <img
-                className="
+         "
+      >
+        Las escalas que necesitas en un solo lugar
+      </h1>
+      <BannerButton
+        className="lg:ml-20 lg:mt-14"
+        click={() => navigate("/app/categories")}
+      >
+        ¡Usar ahora!
+      </BannerButton>
+      <img
+        className="
                absolute
                bottom-0
                w-full
@@ -47,11 +51,11 @@ function Landing () {
                lg:max-h-[180px]
                dark:brightness-[90%]
             "
-                src={ waves }
-                alt="Waves image decoration"
-            />
-            <img
-                className="
+        src={waves}
+        alt="Waves image decoration"
+      />
+      <img
+        className="
                hidden
                absolute
                right-[1%]
@@ -60,12 +64,12 @@ function Landing () {
                lg:block
                dark:brightness-90
             "
-                src={ accept }
-                alt="Accept terms representation"
-            />
-            <ReloadPrompt />
-        </MainContent>
-    );
+        src={accept}
+        alt="Accept terms representation"
+      />
+      <ReloadPrompt />
+    </MainContent>
+  );
 }
 
 export default Landing;

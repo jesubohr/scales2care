@@ -5,11 +5,12 @@ import SearchBar from "./SearchBar";
 import ThemeButton from "./ThemeButton";
 import AsideMenu from "./AsideMenu";
 
-export default function AppHeader () {
-    const isScaleView = (useParams().scaleId) ? true : false;
-    const [isAsideMenuOpen, setAsideMenuOpen] = useState(false);
-    return (
-        <header className="
+export default function AppHeader() {
+  const isScaleView = useParams().scaleId ? true : false;
+  const [isAsideMenuOpen, setAsideMenuOpen] = useState(false);
+  return (
+    <header
+      className="
             sticky
             top-0
             left-0
@@ -29,29 +30,44 @@ export default function AppHeader () {
 
             text-gray-700
             dark:text-gray-300
-            font-noto
+            font-poppins
         "
-        >
-            <div className="flex items-center gap-4 md:gap-8">
-                { isScaleView
-                    ? <Link to="/app/scales">
-                        <Icon icon="arrow-left" />
-                    </Link>
-                    : <div onClick={ () => setAsideMenuOpen(true) }>
-                        <Icon icon="menu" />
-                    </div>
-                }
-                <Link to="/">
-                    <p className="w-fit text-2xl font-medium">Scales2Care</p>
-                </Link>
-            </div>
-            <div className="flex items-center gap-4 md:gap-8">
-                <SearchBar />
-                <ThemeButton className="hidden sm:block" />
-            </div>
-            {
-                isAsideMenuOpen && <AsideMenu closeAsideMenu={ setAsideMenuOpen } />
-            }
-        </header>
-    );
+    >
+      <div className="flex items-center gap-4 md:gap-8">
+        {isScaleView ? (
+          <Link to="/app/scales">
+            <Icon icon="arrow-left" />
+          </Link>
+        ) : (
+          <div
+            onClick={() => setAsideMenuOpen(true)}
+            className="cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+        )}
+        <Link to="/">
+          <p className="w-fit text-2xl font-medium">Scales2Care</p>
+        </Link>
+      </div>
+      <div className="flex items-center gap-4 md:gap-8">
+        <SearchBar />
+        <ThemeButton className="hidden sm:block" />
+      </div>
+      {isAsideMenuOpen && <AsideMenu closeAsideMenu={setAsideMenuOpen} />}
+    </header>
+  );
 }
