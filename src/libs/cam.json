@@ -4,13 +4,13 @@
     "sphere": "PSICOLOGICA O MENTAL",
     "questions": [
         {
-            "Comienzo agudo": [
+            "Comienzo agudo (A)": [
                 {
                     "question": "¿Existe evidencia de un cambio agudo en el estado mental en relación con el estado basal?",
                     "answers": [
                         {
                             "answer": "Sí",
-                            "value": 5
+                            "value": 3
                         },
                         {
                             "answer": "No",
@@ -23,7 +23,7 @@
                     "answers": [
                         {
                             "answer": "Sí",
-                            "value": 5
+                            "value": 3
                         },
                         {
                             "answer": "No",
@@ -32,48 +32,48 @@
                     ]
                 }
             ],
-            "Inatención": [
+            "Inatención (B)": [
                 {
-                    "question": "Atención visual.",
+                    "question": "¿Tiene el paciente la capacidad de focalizar su atención a un estimulo visual externo?",
                     "answers": [
                         {
                             "answer": "Sí",
-                            "value": 1
+                            "value": 0
                         },
                         {
                             "answer": "No",
-                            "value": 0
+                            "value": 7
                         }
                     ]
                 },
                 {
-                    "question": "Atención auditiva.",
+                    "question": "¿Tiene el paciente la capacidad de focalizar su atención a un estimulo auditivo externo?",
                     "answers": [
                         {
                             "answer": "Sí",
-                            "value": 1
+                            "value": 0
                         },
                         {
                             "answer": "No",
-                            "value": 0
+                            "value": 7
                         }
                     ]
-                },
+                }             
+            ],
+            "Pensamiento desorganizado (C)": [
                 {
                     "question": "¿Podría flotar una piedra en el agua?",
                     "answers": [
                         {
                             "answer": "Sí",
-                            "value": 1
+                            "value": 9
                         },
                         {
                             "answer": "No",
                             "value": 0
                         }
                     ]
-                }
-            ],
-            "Pensamiento desorganizado": [
+                },
                 {
                     "question": "¿Existen peces en el mar?",
                     "answers": [
@@ -83,7 +83,7 @@
                         },
                         {
                             "answer": "No",
-                            "value": 1
+                            "value": 9
                         }
                     ]
                 },
@@ -92,7 +92,7 @@
                     "answers": [
                         {
                             "answer": "Si",
-                            "value": 1
+                            "value": 9
                         },
                         {
                             "answer": "No",
@@ -109,22 +109,22 @@
                         },
                         {
                             "answer": "No",
-                            "value": 1
+                            "value": 9
                         }
                     ]
                 }
             ],
-            "Alteración del nivel de conciencia": [
+            "Alteración del nivel de conciencia (D)": [
                 {
                     "question": "¿Está alterado el nivel de conciencia del paciente?",
                     "answers": [
                         {
                             "answer": "Si",
-                            "value": 0
+                            "value": 100
                         },
                         {
                             "answer": "No",
-                            "value": 1
+                            "value": 0
                         }
                     ]
                 }
@@ -134,14 +134,24 @@
     "interpretations": {
         "results": [
             {
-                "min": 5,
-                "max": 6,
+                "min": 28,
+                "max": 56,
                 "result": "Se identificó riesgo alto de Delirium"
             },
             {
                 "min": 0,
-                "max": 4,
-                "result": "Se identificó riesgo de Delirium"
+                "max": 9,
+                "result": "No se identificó riesgo de Delirium"
+            },
+            {
+                "min": 110,
+                "max": 120,
+                "result": "Se identificó riesgo alto de Delirium"
+            },
+             {
+                "min": 128,
+                "max": 156,
+                "result": "Se identificó riesgo alto de Delirium"
             }
         ],
         "titles": [
