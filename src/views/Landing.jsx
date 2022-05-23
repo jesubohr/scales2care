@@ -8,68 +8,41 @@ import waves from "../assets/waves.png";
 //@ts-ignore
 import accept from "../assets/accept-terms.svg";
 
-function Landing() {
-  const navigate = useNavigate();
-  return (
-    <MainContent className="lg:items-start" landing>
-      <LandingHeader />
-      <h1
-        className="
-            mt-10
-            w-11/12
-            sm:w-4/5
-            md:w-2/3
-
-            lg:ml-20
-            lg:w-1/2
-            lg:text-7xl
-            lg:text-left
-
-            text-[3.5rem]
-            leading-none
-            text-center
-            text-med-blue
-            dark:text-med-sky
-            font-poppins
-            font-bold
-         "
-      >
-        Las escalas que necesitas en un solo lugar
-      </h1>
-      <BannerButton
-        className="lg:ml-20 lg:mt-14"
-        click={() => navigate("/app/categories")}
-      >
-        ¡Usar ahora!
-      </BannerButton>
-      <img
-        className="
-               absolute
-               bottom-0
-               w-full
-               max-h-[210px]
-               lg:max-h-[180px]
-               dark:brightness-[90%]
-            "
-        src={waves}
-        alt="Waves image decoration"
-      />
-      <img
-        className="
-               hidden
-               absolute
-               right-[1%]
-               top-28
-               max-h-[65vh]
-               lg:block
-               dark:brightness-90
-            "
-        src={accept}
-        alt="Accept terms representation"
-      />
-      <ReloadPrompt />
-    </MainContent>
-  );
+function Landing () {
+    const navigate = useNavigate();
+    return (
+        <>
+            <LandingHeader />
+            <MainContent className="lg:items-start gx:block pt-20" landing>
+                <h1
+                    className={
+                        "w-full sm:w-4/5 sm:text-7xl" +
+                        "lg:w-1/2 lg:text-7xl lg:text-left " +
+                        "text-6xl leading-none text-center " +
+                        "text-med-blue dark:text-med-sky " +
+                        "font-poppins font-bold"
+                    }
+                >
+                    Las escalas que necesitas en un solo lugar
+                </h1>
+                <BannerButton
+                    className=""
+                    click={ () => navigate("/app/categories") }
+                >¡Usar ahora!</BannerButton>
+                <img
+                    className="hidden absolute top-20 right-20 xl:right-0 max-h-[65vh] gx:block dark:brightness-90"
+                    src={ accept }
+                    alt="Representation of the app"
+                />
+                <ReloadPrompt />
+            </MainContent>
+            <img
+                className="absolute left-0 bottom-0 w-full max-h-[210px] lg:max-h-[180px] dark:brightness-[90%]"
+                src={ waves }
+                alt="Waves image decoration"
+            />
+        </>
+    );
 }
 
 export default Landing;

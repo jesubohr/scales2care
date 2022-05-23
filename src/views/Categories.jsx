@@ -4,7 +4,7 @@ import MainContent from "../components/MainContent";
 
 export default function Categories () {
     return (
-        <MainContent className="p-5 pb-12">
+        <MainContent>
             <h2 className="mb-7
                 text-gray-800 dark:text-gray-300
                 text-4xl font-bold md:text-5xl"

@@ -28,11 +28,11 @@ function Scale () {
     }, [scaleIndex]);
 
     return (
-        <MainContent className="py-10 px-5 gx:items-start">
-            <h2 className="self-center mb-7 text-center text-gray-800 dark:text-gray-300 text-4xl font-bold">
+        <MainContent className="relative px-10">
+            <h2 className="self-center mb-7 text-center text-gray-800 dark:text-gray-200 text-4xl font-bold">
                 { scaleName }
             </h2>
-            <section className="flex flex-col gap-y-6 ml-20 max-w-[30rem] w-11/12">
+            <section className="flex flex-col items-center gap-y-6 w-full">
                 <ScaleScoreContext.Provider value={ TotalScore }>
                     { scaleQuestions.length !== 0 && scaleQuestions.map(({ question, answers }, index) => {
                         return (

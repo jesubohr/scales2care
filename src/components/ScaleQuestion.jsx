@@ -4,9 +4,9 @@ const getLetterItem = (index) => String.fromCharCode(65 + index);
 
 export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
     return (
-        <article className="text-gray-800 dark:text-gray-300">
-            <p className="mb-2 text-xl font-medium">{ getLetterItem(qtIndex) }. { question }</p>
-            <ul className="w-fit">
+        <article className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+            <p className="max-w-3xl text-xl font-medium">{ getLetterItem(qtIndex) }. { question }</p>
+            <ul className="mt-3 w-fit">
                 { answers.map(({ answer, value }, index) => (
                     <ScaleScoreContext.Consumer key={ index }>
                         { ({ setScaleScore }) => (
@@ -14,7 +14,7 @@ export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
                                 <label className="cursor-pointer" htmlFor={ `answer-${qtIndex + 1}-${index + 1}` }>
                                 <input
                                     type="radio"
-                                    className="appearance-none w-4 h-4 mr-2
+                                    className="appearance-none w-4 h-4 mr-3
                                     rounded-full border-none
                                     ring-2 ring-gray-500
                                     ring-offset-2 ring-offset-white dark:ring-offset-[#001B2E]
@@ -29,7 +29,8 @@ export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
                                             score: Number(target['value']),
                                         });
                                     } }
-                                /> { value } - { answer }</label>
+                                />
+                                { answer }</label>
                             </li>
                         ) }
                     </ScaleScoreContext.Consumer>

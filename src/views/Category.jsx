@@ -23,16 +23,11 @@ export default function Category () {
             : "bg-med-blue dark:bg-med-blue";
     };
     return (
-        <MainContent className="p-5 pb-12">
+        <MainContent>
             <h2 className="mb-7 text-center text-gray-800 dark:text-gray-300 text-4xl font-bold">
                 { categoryTitle(category) }
             </h2>
-            <section className="
-                max-w-[43rem]
-                flex flex-wrap
-                justify-center items-center
-                gap-5"
-            >
+            <section className="grid lg:grid-cols-2 gap-5 max-w-[43rem]">
                 { scalesPerCategory[categoryTitle(category)].map((
                     {scaleName, scaleId}, index) => {
                     return (

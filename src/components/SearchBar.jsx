@@ -13,10 +13,7 @@ export default function SearchBar ({ className = "" }) {
     const handleSearch = debounce(({ target }) => {
         const { value } = target;
         const scales = nameScales.map((name, index) => {
-            if (fuzzysearch(value, name)) return {
-                id: index,
-                name,
-            };
+            if (fuzzysearch(value, name)) return { id: index, name };
         }).filter(Boolean);
         setResults(scales);
         
@@ -33,24 +30,15 @@ export default function SearchBar ({ className = "" }) {
                 placeholder="Buscar una escala"
                 onChange={ handleSearch }
                 className="
-                    grow
-                    py-2
-                    px-3
-                    dark:bg-[#182d51]
-                    border-b-2
-                    focus:border-transparent
-                    border-med-blue
-                    dark:border-med-sky
-                    placeholder:text-med-blue/60
-                    dark:placeholder:text-med-sky/80
-                    caret-med-blue
-                    dark:caret-med-sky
-                    outline-med-blue
-                    dark:outline-med-sky
-                    dark:text-med-sky
-                    font-medium
+                    grow py-2 px-3
                     w-full md:w-auto
-                    rounded-lg
+                    dark:bg-[#182d51]
+                    border-2 border-med-blue rounded-lg
+                    focus:border-transparent dark:border-med-sky
+                    placeholder:text-med-blue/60 dark:placeholder:text-med-sky/80
+                    caret-med-blue dark:caret-med-sky
+                    outline-med-blue dark:outline-med-sky
+                    dark:text-med-sky font-medium
                 "
             />
             <ul id="search-results" ref={ searchResults } className={
