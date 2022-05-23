@@ -13,7 +13,7 @@ function Landing () {
     return (
         <>
             <LandingHeader />
-            <MainContent className="lg:items-start gx:block pt-20" landing>
+            <MainContent className="lg:items-start gx:block pt-12" landing>
                 <h1
                     className={
                         "w-full sm:w-4/5 sm:text-7xl" +
@@ -30,7 +30,7 @@ function Landing () {
                     click={ () => navigate("/app/categories") }
                 >¡Usar ahora!</BannerButton>
                 <img
-                    className="hidden absolute top-20 right-20 xl:right-0 max-h-[65vh] gx:block dark:brightness-90"
+                    className="hidden absolute top-12 right-20 xl:right-0 max-h-[65vh] gx:block dark:brightness-90 z-10"
                     src={ accept }
                     alt="Representation of the app"
                 />
