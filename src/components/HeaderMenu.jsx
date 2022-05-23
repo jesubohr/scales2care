@@ -16,7 +16,7 @@ export default function Menu ({ openMenu, onClick, children }) {
                     `${openMenu ? "flex" : "hidden"} ` +
                     "flex-col items-end gap-y-8 " +
                     "absolute top-0 right-0 mt-[75px] py-8 px-6 w-full " +
-                    "bg-black/20 dark:bg-black/60 backdrop-blur-sm " +
+                    "bg-black/40 dark:bg-black/70 backdrop-blur-sm " +
                     "sm:mr-8 sm:w-2/3 sm:rounded-lg " +
                     "md:relative md:m-0 md:p-0 md:w-fit " +
                     "md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none " +

@@ -36,7 +36,7 @@ export default function LandingHeader () {
                 "w-full h-[75px] " +
                 "bg-white dark:bg-dark-blue " +
                 "border-b-2 border-med-blue/20 " +
-                "text-med-blue"
+                "text-med-blue z-20"
             }
         >
             <div className="flex justify-between items-center w-full max-w-7xl">

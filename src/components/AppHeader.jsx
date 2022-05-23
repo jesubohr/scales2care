@@ -51,7 +51,7 @@ export default function AppHeader () {
             </header>
             {
                 <div className={
-                    "absolute top-0 left-0 flex w-full h-screen" +
+                    "fixed top-0 left-0 flex w-full h-screen" +
                     "transition ease-out duration-300 z-20 " +
                     `${isAsideMenuOpen ? "opacity-100" : "opacity-0 -translate-x-full"}`
                 }>
