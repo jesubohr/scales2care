@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Menu from "./HeaderMenu";
 import SearchBar from "./SearchBar";
-import ThemeButton from "./ThemeButton";
+import { ThemeButton } from "./Buttons";
 import AsideMenu from "./AsideMenu";
 import Icon from "./Icon";
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Menu from "./HeaderMenu";
 import SearchBar from "./SearchBar";
-import ThemeButton from "./ThemeButton";
+import { ThemeButton } from "./Buttons";
 // @ts-ignore
 import logo from "../assets/logo.png";
 

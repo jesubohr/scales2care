@@ -1,5 +1,4 @@
-import CategoryButton from "../components/CategoryButton";
-import { LinkButton } from "../components/Buttons";
+import { CategoryButton, LinkButton } from "../components/Buttons";
 import MainContent from "../components/MainContent";
 
 export default function Categories () {

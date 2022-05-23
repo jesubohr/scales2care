@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Icon from "./Icon";
+import Icon from "../Icon";
 
 export default function CategoryButton ({ title, color = false }) {
     const navigate = useNavigate();

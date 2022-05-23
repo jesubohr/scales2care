@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import toogleDarkMode from '../utils/darkMode';
+import toogleDarkMode from '../../utils/darkMode';
 
 export default function ThemeButton ({ className = "" }) {
     const initTheme = (localStorage.getItem('theme') === 'dark') ? '🌞' : '🌚';
