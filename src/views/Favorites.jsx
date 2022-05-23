@@ -19,17 +19,18 @@ export default function Favorites () {
         }
     });
     return (
-        <MainContent>
+        <MainContent className="p-5 pb-12">
             <h2 className="mb-7 text-gray-800 dark:text-gray-300 text-4xl font-bold md:text-5xl">Escalas Favoritas</h2>
             <section className="flex flex-col justify-center gap-5">
                 {
                     favoritesScales.map((id, index) => {
                         return (
                             <LinkButton
+                                title={`${nameScales[id]}`}
                                 key={ index }
-                                href={ `/app/scales/${id}` }
+                                href={ `/app/scales/${id + 1}` }
                                 className={ "py-4 px-4 sm:px-2 md:py-6 md:px-20 text-base sm:text-2xl md:text-2xl " + `${alternateColor(index)}` }
-                            >{ nameScales[id - 1] }</LinkButton>
+                            />
                         );
                     })
                 }
