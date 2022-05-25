@@ -22,7 +22,6 @@ function Scale() {
       setScores([...filterScores, qScore]);
     },
   };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [scaleIndex]);
@@ -36,19 +35,67 @@ function Scale() {
         <ScaleScoreContext.Provider value={TotalScore}>
           {scaleQuestions.length !== 0 &&
             scaleQuestions.map(
-              ({ question, answers, instruction, example }, index) => {
-                return (
-                  <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
-                    {instruction ? <p className="mb-2">{instruction}</p> : null}
-                    {example ? <p className="mb-5">{example}</p> : null}
-                    <ScaleQuestion
-                      key={index}
-                      index={index}
-                      question={question}
-                      answers={answers}
-                    />
-                  </div>
-                );
+              (
+                { question, answers, instruction, example, type, questions },
+                index
+              ) => {
+                if (!type) {
+                  return (
+                    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+                      {instruction ? (
+                        <p className="mb-2">{instruction}</p>
+                      ) : null}
+                      {example ? <p className="mb-5">{example}</p> : null}
+                      <ScaleQuestion
+                        key={index}
+                        index={index}
+                        question={question}
+                        answers={answers}
+                      />
+                    </div>
+                  );
+                } else {
+                  let base = index;
+                  const before = scaleQuestions[index - 1];
+                  if (index === 1) {
+                    base = index - 1 + before.questions.length;
+                  } else if (index === scaleQuestions.length - 1) {
+                    base = index + before.questions.length + 1;
+                  } else if (index > 0) {
+                    base = index + before.questions.length;
+                  }
+                  return (
+                    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+                      <h3 className="max-w-3xl text-xl font-bold mb-3 w-full text-center">
+                        {type}
+                      </h3>
+                      {questions.map(
+                        (
+                          { question, answers, instruction, example },
+                          index2
+                        ) => {
+                          console.log(base + index2);
+                          return (
+                            <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+                              {instruction ? (
+                                <p className="mb-2">{instruction}</p>
+                              ) : null}
+                              {example ? (
+                                <p className="mb-5">{example}</p>
+                              ) : null}
+                              <ScaleQuestion
+                                key={base + index2}
+                                index={base + index2}
+                                question={question}
+                                answers={answers}
+                              />
+                            </div>
+                          );
+                        }
+                      )}
+                    </div>
+                  );
+                }
               }
             )}
         </ScaleScoreContext.Provider>

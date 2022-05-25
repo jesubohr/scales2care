@@ -1,6 +1,7 @@
 export const camQuestions = [
   {
-    "Comienzo agudo (A)": [
+    type: "Comienzo agudo (A)",
+    questions: [
       {
         question:
           "¿Existe evidencia de un cambio agudo en el estado mental en relación con el estado basal?",
@@ -30,7 +31,10 @@ export const camQuestions = [
         ],
       },
     ],
-    "Inatención (B)": [
+  },
+  {
+    type: "Inatención (B)",
+    questions: [
       {
         question:
           "¿Tiene el paciente la capacidad de focalizar su atención a un estimulo visual externo?",
@@ -60,7 +64,10 @@ export const camQuestions = [
         ],
       },
     ],
-    "Pensamiento desorganizado (C)": [
+  },
+  {
+    type: "Pensamiento desorganizado (C)",
+    questions: [
       {
         question: "¿Podría flotar una piedra en el agua?",
         answers: [
@@ -114,7 +121,10 @@ export const camQuestions = [
         ],
       },
     ],
-    "Alteración del nivel de conciencia (D)": [
+  },
+  {
+    type: "Alteración del nivel de conciencia (D)",
+    questions: [
       {
         question: "¿Está alterado el nivel de conciencia del paciente?",
         answers: [
