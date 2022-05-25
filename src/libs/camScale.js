@@ -150,11 +150,6 @@ export const camResults = {
       result: "Se identificó riesgo alto de Delirium",
     },
     {
-      min: 0,
-      max: 9,
-      result: "No se identificó riesgo de Delirium",
-    },
-    {
       min: 110,
       max: 120,
       result: "Se identificó riesgo alto de Delirium",
@@ -163,6 +158,11 @@ export const camResults = {
       min: 128,
       max: 156,
       result: "Se identificó riesgo alto de Delirium",
+    },
+    {
+      min: 0,
+      max: 9,
+      result: "No se identificó riesgo de Delirium",
     },
   ],
   titles: ["Resultado", "Riesgo de Delirium"],
