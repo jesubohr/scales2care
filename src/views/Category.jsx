@@ -20,13 +20,13 @@ export default function Category () {
     };
     const alternateColor = (index) => {
         return (index % 2 === 0)
-            ? "bg-med-sky dark:bg-med-sky"
-            : "bg-med-blue dark:bg-med-blue";
+            ? "border-med-sky"
+            : "border-med-blue";
     };
     return (
         <MainContent>
             <Title>{ categoryTitle(category) }</Title>
-            <section className="grid lg:grid-cols-2 gap-5 max-w-[43rem]">
+            <section className="grid sm:flex flex-wrap justify-center gap-5">
                 { scalesPerCategory[categoryTitle(category)].map((
                     { scaleName, scaleId }, index) => {
                     return (

@@ -12,7 +12,13 @@ export default function Categories () {
                 <CategoryButton title="Componente Social" color />
                 <CategoryButton title="Componente Triple" />
             </section>
-            <LinkButton href="/app/scales" title="Lista Completa" className="mt-10 py-3 px-7 bg-med-sky dark:bg-med-sky text-gray-50 dark:text-gray-900 text-2xl" />
+            <LinkButton href="/app/scales" title="Lista Completa" className={
+                "mt-10 py-3 px-7 " +
+                "border-4 border-med-sky hover:bg-med-sky " +
+                "hover:text-white text-2xl dark:text-white " +
+                "transition-colors " +
+                "backdrop-blur-sm backdrop-brightness-50 backdrop-opacity-10 dark:backdrop-brightness-200 dark:backdrop-opacity-60"
+            } />
         </MainContent>
     );
 }

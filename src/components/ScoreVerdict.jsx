@@ -5,7 +5,7 @@ export default function ScoreVerdict({ scaleResults, totalScore }) {
       <section
         className={
           "flex flex-col items-center " +
-          "max-w-3xl w-full " +
+          "max-w-xl w-full " +
           "mt-12 px-5 py-10 " +
           "text-gray-800 dark:text-gray-200  " +
           "bg-white/90 dark:bg-[#001B2E]/90 " +
@@ -26,7 +26,7 @@ export default function ScoreVerdict({ scaleResults, totalScore }) {
               <p
                 key={index}
                 className={
-                  "text-lg leading-none" +
+                  "flex items-center gap-2 text-lg" +
                   (min <= totalScore && totalScore <= max
                     ? " text-med-blue font-medium"
                     : "")
