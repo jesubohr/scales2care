@@ -72,3 +72,11 @@ html.dark *::-webkit-scrollbar-thumb {
 html.dark *::-webkit-scrollbar-thumb:hover {
     background-color: #0f50c0;
 }
+
+#root {
+    background-image: url('./assets/stethoscope.svg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 50px 60px;
+    background-attachment: fixed;
+}

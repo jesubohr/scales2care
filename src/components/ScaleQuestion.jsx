@@ -4,7 +4,7 @@ const getLetterItem = (index) => String.fromCharCode(65 + index);
 
 export default function ScaleQuestion ({ index: qtIndex, question, answers }) {
     return (
-        <article className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+        <article className="py-2 px-4 w-full max-w-3xl text-gray-800 dark:text-gray-200 dark:bg-slate-900/50 dark:backdrop-blur-[1px]">
             <p className="max-w-3xl text-xl font-medium">{ getLetterItem(qtIndex) }. { question }</p>
             <ul className="mt-3 w-fit">
                 { answers.map(({ answer, value }, index) => (

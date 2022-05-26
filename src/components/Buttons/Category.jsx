@@ -8,17 +8,18 @@ export default function CategoryButton ({ title, color = false }) {
     return (
         <article
             className={
-                "p-5 " +
-                "max-w-xs w-10/12 h-44 " +
-                "rounded-3xl cursor-pointer " +
+                "py-5 px-5 " +
+                "max-w-md max-h-28 " +
+                "rounded cursor-pointer " +
                 "sm:w-[46%] " +
-                "text-gray-50 dark:text-gray-900 " +
-                `${color ? "bg-med-sky" : "bg-med-blue"}`
+                "dark:text-gray-50 " +
+                "backdrop-blur-sm backdrop-brightness-50 backdrop-opacity-10 dark:backdrop-brightness-200 dark:backdrop-opacity-60 " +
+                `border-4 ${color ? "border-med-sky" : "border-med-blue"}`
             }
-            onClick={() => {navigate('/app/categories/' + urlTitle)}}
+            onClick={ () => { navigate('/app/categories/' + urlTitle); } }
         >
-            <Icon icon="beat" viewBox="31" size="36" />
-            <p className="mt-4 max-w-[15rem] text-2xl font-medium">{title}</p>
+            <Icon icon="beat" viewBox="31" size="36" className={`absolute -top-4 -left-4 p-0.5 ${color ? "bg-med-sky" : "bg-med-blue"} rounded-sm text-white`} />
+            <h3 className="max-w-fit text-2xl font-medium">{ title }</h3>
         </article>
-    )
+    );
 }

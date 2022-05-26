@@ -9,16 +9,17 @@ export default function ScaleButton ({ id, name, className = "" }) {
         <div
             className={
                 "flex items-center gap-5 " +
-                "px-8 " +
-                "w-80 h-40 " +
+                "py-2 px-8 " +
+                "max-w-xs sm:max-w-md md:max-w-none w-full md:w-fit rounded " +
                 "text-base sm:text-2xl md:text-2xl " +
-                "text-gray-50 dark:text-gray-900 font-medium " +
-                `${className}`
+                "text-gray-900 dark:text-gray-50 font-medium " +
+                "backdrop-blur-sm backdrop-brightness-50 backdrop-opacity-10 dark:backdrop-brightness-200 dark:backdrop-opacity-60 " +
+                `border-4 ${className}`
             }
         >
             <button
                 title={ `Ir a escala: ${name}` }
-                className="h-full grow text-left"
+                className="grow md:grow-0 w-max h-full text-left"
                 onClick={ () => {
                     navigate(`/app/scales/${id + 1}`);
                 } }

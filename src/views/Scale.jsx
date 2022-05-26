@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import MainContent from "../components/MainContent";
 import ScaleQuestion from "../components/ScaleQuestion";
 import ScoreVerdict from "../components/ScoreVerdict";
+import Title from "../components/Title";
+
 import { nameScales, scalesQuestions, scalesResults } from '../utils/scales';
 import { ScaleScoreContext } from "../utils/context";
 
@@ -29,9 +31,7 @@ function Scale () {
 
     return (
         <MainContent className="relative px-10">
-            <h2 className="self-center mb-7 text-center text-gray-800 dark:text-gray-200 text-4xl font-bold">
-                { scaleName }
-            </h2>
+            <Title className="self-center">{ scaleName }</Title>
             <section className="flex flex-col items-center gap-y-6 w-full">
                 <ScaleScoreContext.Provider value={ TotalScore }>
                     { scaleQuestions.length !== 0 && scaleQuestions.map(({ question, answers }, index) => {

@@ -3,6 +3,7 @@ import MainContent from "../components/MainContent";
 import { LinkButton } from "../components/Buttons";
 import { nameScales } from "../utils/scales";
 import { Store } from "../utils/localStorage";
+import Title from "../components/Title";
 
 export default function Favorites () {
     const [favoritesScales, _] = useState(() => {
@@ -10,8 +11,8 @@ export default function Favorites () {
     });
     const alternateColor = (index) => {
         return (index % 2 === 0)
-            ? "bg-med-sky dark:bg-med-sky"
-            : "bg-med-blue dark:bg-med-blue";
+            ? "border-med-sky"
+            : "border-med-blue";
     };
     useEffect(() => {
         if (Store.get("user-favorite-scales") === null) {
@@ -20,8 +21,8 @@ export default function Favorites () {
     });
     return (
         <MainContent className="p-5 pb-12">
-            <h2 className="mb-7 text-gray-800 dark:text-gray-300 text-4xl font-bold md:text-5xl">Escalas Favoritas</h2>
-            <section className="flex flex-col justify-center gap-5">
+            <Title>Escalas Favoritas</Title>
+            <section className="flex flex-wrap justify-center gap-5">
                 {
                     favoritesScales.map((id, index) => {
                         return (
@@ -29,7 +30,11 @@ export default function Favorites () {
                                 title={`${nameScales[id]}`}
                                 key={ index }
                                 href={ `/app/scales/${id + 1}` }
-                                className={ "py-4 px-4 sm:px-2 md:py-6 md:px-20 text-base sm:text-2xl md:text-2xl " + `${alternateColor(index)}` }
+                                className={
+                                    "py-4 px-6 " +
+                                    "text-xl sm:text-2xl dark:text-gray-50 " +
+                                    "backdrop-blur-sm backdrop-brightness-50 backdrop-opacity-10 dark:backdrop-brightness-200 dark:backdrop-opacity-60 " +
+                                    `border-4 ${alternateColor(index)}` }
                             />
                         );
                     })

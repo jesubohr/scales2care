@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import MainContent from "../components/MainContent";
 import { ScaleButton } from "../components/Buttons";
+import Title from "../components/Title";
 import { scalesPerCategory } from "../utils/scales";
 
 export default function Category () {
@@ -24,12 +25,10 @@ export default function Category () {
     };
     return (
         <MainContent>
-            <h2 className="mb-7 text-center text-gray-800 dark:text-gray-300 text-4xl font-bold">
-                { categoryTitle(category) }
-            </h2>
+            <Title>{ categoryTitle(category) }</Title>
             <section className="grid lg:grid-cols-2 gap-5 max-w-[43rem]">
                 { scalesPerCategory[categoryTitle(category)].map((
-                    {scaleName, scaleId}, index) => {
+                    { scaleName, scaleId }, index) => {
                     return (
                         <ScaleButton
                             key={ index }

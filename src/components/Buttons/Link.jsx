@@ -5,7 +5,7 @@ export default function LinkButton ({ title, className = "", href = "#" }) {
     return (
         <button
             type="button"
-            className={ "text-gray-50 dark:text-gray-900 font-medium " + `${className}` }
+            className={ "w-full sm:w-auto min-w-fit rounded font-medium " + `${className}` }
             onClick={ () => {
                 navigate(href);
             } }

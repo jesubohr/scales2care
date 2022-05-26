@@ -1,6 +1,7 @@
 const icons = {
     close: "M6 18L18 6M6 6l12 12",
     "arrow-left": "M1.5 7.5l4-4m-4 4l4 4m-4-4H14",
+    "arrow-right": "M13.5 7.5l-4-4m4 4l-4 4m4-4H1",
     menu: "M4 6h16M4 12h16M4 18h16",
     search: "M15 15l-4-4m-4 2a6 6 0 110-12 6 6 0 010 12z",
     beat: "M27.7003 15.1542H22.7003L18.9503 26.4042L11.4503 3.90424L7.70032 15.1542H2.70032",
@@ -10,7 +11,7 @@ const icons = {
     star: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
 };
 
-export default function Icon ({ icon, fill = "none", stroke = "currentColor", viewBox = "15", size = "24", onClick = () => { } }) {
+export default function Icon ({ icon, fill = "none", stroke = "currentColor", viewBox = "15", size = "24", className = "", onClick = () => { } }) {
     return (
         <svg
             fill={ fill }
@@ -21,7 +22,7 @@ export default function Icon ({ icon, fill = "none", stroke = "currentColor", vi
             width={ `${size}` }
             height={ `${size}` }
             xmlns="http://www.w3.org/2000/svg"
-            className="cursor-pointer"
+            className={ `cursor-pointer ${className}` }
             onClick={ onClick }
         >
             <path d={ icons[icon] } stroke={ stroke } />
