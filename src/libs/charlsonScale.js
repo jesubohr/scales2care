@@ -280,8 +280,8 @@ export const charlsonResults = {
     {
       min: 5,
       max: 100,
-      result: "Probabilidad de falleciemiento del paciente: 52%",
+      result: "Probabilidad de falleciemiento del paciente: 85%",
     },
   ],
-  titles: ["Resultado", "Probabilidad"],
+  titles: ["Resultado", "Probabilidad de Fallecimiento"],
 };
