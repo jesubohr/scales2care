@@ -45,7 +45,7 @@ export default function AppHeader () {
                         onClick={ () => setOpenMenu((open) => !open) }
                     >
                         <SearchBar className={ `${openMenu ? "w-full md:w-auto" : ""}` } />
-                        <ThemeButton className={ `${openMenu ? "w-full md:w-auto" : ""}` } />
+                        <ThemeButton />
                     </Menu>
                 </div>
             </header>

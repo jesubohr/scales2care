@@ -46,7 +46,7 @@ export default function LandingHeader () {
                     onClick={ () => setOpenMenu((open) => !open) }
                 >
                     <SearchBar className={ `${openMenu ? "w-full md:w-auto" : ""}` } />
-                    <ThemeButton className={ `${openMenu ? "w-full md:w-auto" : ""}` } />
+                    <ThemeButton />
                 </Menu>
             </div>
         </header>

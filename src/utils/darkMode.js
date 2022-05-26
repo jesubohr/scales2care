@@ -1,11 +1,11 @@
-export default function toogleDarkMode () {
+export default function toogleLocalTheme () {
    document.documentElement.classList.toggle('dark');
    if (localStorage.getItem('theme') === 'dark') {
       localStorage.setItem('theme', 'light');
-      return '🌚';
+      return '🌞';
    }
    else {
       localStorage.setItem('theme', 'dark');
-      return '🌞';
+      return '🌚';
    }
 }
