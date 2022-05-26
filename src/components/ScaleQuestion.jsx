@@ -1,11 +1,6 @@
 import { ScaleScoreContext } from "../utils/context";
 
-export default function ScaleQuestion({
-  index: qtIndex,
-  question,
-  answers,
-  typeV = "letter",
-}) {
+export default function ScaleQuestion({ index: qtIndex, question, answers }) {
   return (
     <article className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
       <p className="max-w-3xl text-xl font-medium">

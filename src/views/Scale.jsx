@@ -3,11 +3,68 @@ import { useParams } from "react-router-dom";
 import MainContent from "../components/MainContent";
 import ScaleQuestion from "../components/ScaleQuestion";
 import ScoreVerdict from "../components/ScoreVerdict";
-import { nameScales, scalesQuestions, scalesResults } from "../utils/scales";
+import RegisterUser from "../components/RegisterUser";
+import {
+  nameScales,
+  scalesQuestions,
+  scalesResults,
+  categoryPerScale,
+} from "../utils/scales";
 import { ScaleScoreContext } from "../utils/context";
 
+function GroupedScale({ index, scaleQuestions, group, questions }) {
+  let base = index;
+  const before = scaleQuestions[index - 1];
+  if (index === 1) {
+    base = index - 1 + before.questions.length;
+  } else if (index === scaleQuestions.length - 1) {
+    base = index + before.questions.length + 1;
+  } else if (index > 0) {
+    base = index + before.questions.length;
+  }
+  return (
+    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+      <h3 className="max-w-3xl text-xl font-bold mb-3 w-full text-center">
+        {group}
+      </h3>
+      {questions.map(({ question, answers, instruction, example }, index2) => {
+        console.log(base + index2);
+        return (
+          <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+            {instruction ? <p className="mb-2">{instruction}</p> : null}
+            {example ? <p className="mb-5">{example}</p> : null}
+            <ScaleQuestion
+              key={base + index2}
+              index={base + index2}
+              question={question}
+              answers={answers}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function UngroupedScale({ index, question, answers, instruction, example }) {
+  return (
+    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
+      {instruction ? <p className="mb-2">{instruction}</p> : null}
+      {example ? <p className="mb-5">{example}</p> : null}
+      <ScaleQuestion
+        key={index}
+        index={index}
+        question={question}
+        answers={answers}
+      />
+    </div>
+  );
+}
+
 function Scale() {
+  const [dni, setDni] = useState(undefined);
   const [scores, setScores] = useState([]);
+
   const { scaleId } = useParams();
 
   const scaleIndex = Number(scaleId) - 1;
@@ -15,13 +72,14 @@ function Scale() {
 
   const scaleQuestions = scalesQuestions[scaleIndex] ?? [];
   const scaleResults = scalesResults[scaleIndex] ?? {};
-  console.log(scaleQuestions);
+
   const TotalScore = {
     setScaleScore: (qScore) => {
       const filterScores = scores.filter(({ id }) => id !== qScore.id);
       setScores([...filterScores, qScore]);
     },
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [scaleIndex]);
@@ -36,74 +94,48 @@ function Scale() {
           {scaleQuestions.length !== 0 &&
             scaleQuestions.map(
               (
-                { question, answers, instruction, example, type, questions },
+                { question, answers, instruction, example, group, questions },
                 index
               ) => {
-                if (!type) {
+                console.log(TotalScore);
+                if (!group) {
                   return (
-                    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
-                      {instruction ? (
-                        <p className="mb-2">{instruction}</p>
-                      ) : null}
-                      {example ? <p className="mb-5">{example}</p> : null}
-                      <ScaleQuestion
-                        key={index}
-                        index={index}
-                        question={question}
-                        answers={answers}
-                      />
-                    </div>
+                    <UngroupedScale
+                      index={index}
+                      question={question}
+                      answers={answers}
+                      instruction={instruction}
+                      example={example}
+                    />
                   );
                 } else {
-                  let base = index;
-                  const before = scaleQuestions[index - 1];
-                  if (index === 1) {
-                    base = index - 1 + before.questions.length;
-                  } else if (index === scaleQuestions.length - 1) {
-                    base = index + before.questions.length + 1;
-                  } else if (index > 0) {
-                    base = index + before.questions.length;
-                  }
                   return (
-                    <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
-                      <h3 className="max-w-3xl text-xl font-bold mb-3 w-full text-center">
-                        {type}
-                      </h3>
-                      {questions.map(
-                        (
-                          { question, answers, instruction, example },
-                          index2
-                        ) => {
-                          console.log(base + index2);
-                          return (
-                            <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
-                              {instruction ? (
-                                <p className="mb-2">{instruction}</p>
-                              ) : null}
-                              {example ? (
-                                <p className="mb-5">{example}</p>
-                              ) : null}
-                              <ScaleQuestion
-                                key={base + index2}
-                                index={base + index2}
-                                question={question}
-                                answers={answers}
-                              />
-                            </div>
-                          );
-                        }
-                      )}
-                    </div>
+                    <GroupedScale
+                      index={index}
+                      scaleQuestions={scaleQuestions}
+                      group={group}
+                      questions={questions}
+                    />
                   );
                 }
               }
             )}
         </ScaleScoreContext.Provider>
       </section>
-      <ScoreVerdict
-        scaleResults={scaleResults}
-        totalScore={scores.reduce((acc, { score }) => acc + score, 0)}
-      />
+      {dni ? (
+        <ScoreVerdict
+          scaleResults={scaleResults}
+          totalScore={scores.reduce((acc, { score }) => acc + score, 0)}
+          dni={dni}
+          scaleName={scaleName}
+          scaleSphere={
+            categoryPerScale.find((item) => item.scaleId === scaleIndex)
+              ?.category ?? "No definido"
+          }
+        />
+      ) : (
+        <RegisterUser setDni={setDni} />
+      )}
     </MainContent>
   );
 }
