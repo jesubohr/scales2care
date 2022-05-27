@@ -35,7 +35,7 @@ export const nameScales = [
   "Escala Morse",
 ];
 export const scalesPerCategory = {
-  "Componente Biológico o Clínico": [
+  "Biológica o Clínica": [
     { scaleName: nameScales[0], scaleId: 0 },
     { scaleName: nameScales[10], scaleId: 10 },
     { scaleName: nameScales[11], scaleId: 11 },
@@ -47,13 +47,13 @@ export const scalesPerCategory = {
     { scaleName: nameScales[13], scaleId: 13 },
     { scaleName: nameScales[5], scaleId: 5 },
   ],
-  "Componente Psicológico o Mental": [
+  "Psicológica o Mental": [
     { scaleName: nameScales[9], scaleId: 9 },
     { scaleName: nameScales[14], scaleId: 14 },
     { scaleName: nameScales[3], scaleId: 3 },
   ],
-  "Componente Social": [{ scaleName: nameScales[4], scaleId: 4 }],
-  "Componente Triple": [
+  "Social": [{ scaleName: nameScales[4], scaleId: 4 }],
+  "Triple": [
     { scaleName: nameScales[2], scaleId: 2 },
     { scaleName: nameScales[1], scaleId: 1 },
     { scaleName: nameScales[16], scaleId: 16 },

@@ -32,7 +32,6 @@ function GroupedScale({ index, scaleQuestions, group, questions }) {
         {group}
       </h3>
       {questions.map(({ question, answers, instruction, example }, index2) => {
-        console.log(base + index2);
         return (
           <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
             {instruction ? <p className="mb-2">{instruction}</p> : null}

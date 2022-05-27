@@ -6,11 +6,11 @@ export default function Categories () {
     return (
         <MainContent>
             <Title>Categorías</Title>
-            <section className="max-w-3xl flex flex-wrap justify-center items-center gap-5">
-                <CategoryButton title="Componente Biológico o Clínico" color />
-                <CategoryButton title="Componente Psicológico o Mental" />
-                <CategoryButton title="Componente Social" color />
-                <CategoryButton title="Componente Triple" />
+            <section className="max-w-2xl grid md:grid-cols-2 justify-center items-center gap-5">
+                <CategoryButton title="Biológica o Clínica" color />
+                <CategoryButton title="Psicológica o Mental" />
+                <CategoryButton title="Social" color />
+                <CategoryButton title="Triple" />
             </section>
             <LinkButton href="/app/scales" title="Lista Completa" className={
                 "mt-10 py-3 px-7 " +
