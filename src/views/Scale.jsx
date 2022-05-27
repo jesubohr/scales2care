@@ -16,15 +16,15 @@ import {
 
 import { ScaleScoreContext } from "../utils/context";
 
-function GroupedScale({ index, scaleQuestions, group, questions }) {
-  let base = index;
-  const before = scaleQuestions[index - 1];
-  if (index === 1) {
-    base = index - 1 + before.questions.length;
-  } else if (index === scaleQuestions.length - 1) {
-    base = index + before.questions.length + 1;
-  } else if (index > 0) {
-    base = index + before.questions.length;
+function GroupedScale({ index: baseIndex, scaleQuestions, group, questions }) {
+  let base = baseIndex;
+  const before = scaleQuestions[baseIndex - 1];
+  if (baseIndex === 1) {
+    base = baseIndex - 1 + before.questions.length;
+  } else if (baseIndex === scaleQuestions.length - 1) {
+    base = baseIndex + before.questions.length + 1;
+  } else if (baseIndex > 0) {
+    base = baseIndex + before.questions.length;
   }
   return (
     <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
@@ -55,7 +55,6 @@ function UngroupedScale({ index, question, answers, instruction, example }) {
       {instruction ? <p className="mb-2">{instruction}</p> : null}
       {example ? <p className="mb-5">{example}</p> : null}
       <ScaleQuestion
-        key={index}
         index={index}
         question={question}
         answers={answers}
@@ -94,14 +93,12 @@ function Scale() {
         <ScaleScoreContext.Provider value={TotalScore}>
           {scaleQuestions.length !== 0 &&
             scaleQuestions.map(
-              (
-                { question, answers, instruction, example, group, questions },
-                index
-              ) => {
-                console.log(TotalScore);
+              ({ question, answers, instruction, example, group, questions }, index) => 
+              {
                 if (!group) {
                   return (
                     <UngroupedScale
+                      key={index}
                       index={index}
                       question={question}
                       answers={answers}
@@ -112,6 +109,7 @@ function Scale() {
                 } else {
                   return (
                     <GroupedScale
+                      key={index}
                       index={index}
                       scaleQuestions={scaleQuestions}
                       group={group}

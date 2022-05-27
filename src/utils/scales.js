@@ -64,71 +64,71 @@ export const categoryPerScale = [
   {
     scaleName: nameScales[0],
     scaleId: 0,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[10],
     scaleId: 10,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[11],
     scaleId: 11,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[12],
     scaleId: 12,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[15],
     scaleId: 15,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[7],
     scaleId: 7,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[8],
     scaleId: 8,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[6],
     scaleId: 6,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[13],
     scaleId: 13,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[5],
     scaleId: 5,
-    category: "Componente Biológico o Clínico",
+    category: "Biológica o Clínica",
   },
   {
     scaleName: nameScales[9],
     scaleId: 9,
-    category: "Componente Psicológico o Mental",
+    category: "Psicológica o Mental",
   },
   {
     scaleName: nameScales[14],
     scaleId: 14,
-    category: "Componente Psicológico o Mental",
+    category: "Psicológica o Mental",
   },
   {
     scaleName: nameScales[3],
     scaleId: 3,
-    category: "Componente Psicológico o Mental",
+    category: "Psicológica o Mental",
   },
-  { scaleName: nameScales[2], scaleId: 2, category: "Componente Triple" },
-  { scaleName: nameScales[1], scaleId: 1, category: "Componente Triple" },
-  { scaleName: nameScales[16], scaleId: 16, category: "Componente Triple" },
+  { scaleName: nameScales[2], scaleId: 2, category: "Triple" },
+  { scaleName: nameScales[1], scaleId: 1, category: "Triple" },
+  { scaleName: nameScales[16], scaleId: 16, category: "Triple" },
 ];
 
 export const scalesResults = [
