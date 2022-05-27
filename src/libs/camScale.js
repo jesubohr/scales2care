@@ -1,6 +1,6 @@
 export const camQuestions = [
   {
-    type: "Comienzo agudo (A)",
+    group: "Comienzo agudo (A)",
     questions: [
       {
         question:
@@ -33,7 +33,7 @@ export const camQuestions = [
     ],
   },
   {
-    type: "Inatención (B)",
+    group: "Inatención (B)",
     questions: [
       {
         question:
@@ -66,7 +66,7 @@ export const camQuestions = [
     ],
   },
   {
-    type: "Pensamiento desorganizado (C)",
+    group: "Pensamiento desorganizado (C)",
     questions: [
       {
         question: "¿Podría flotar una piedra en el agua?",
@@ -123,7 +123,7 @@ export const camQuestions = [
     ],
   },
   {
-    type: "Alteración del nivel de conciencia (D)",
+    group: "Alteración del nivel de conciencia (D)",
     questions: [
       {
         question: "¿Está alterado el nivel de conciencia del paciente?",

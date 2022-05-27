@@ -1,5 +1,29 @@
-import Icon from './Icon';
-export default function ScoreVerdict({ scaleResults, totalScore }) {
+import Icon from "./Icon";
+import { addResult } from "../utils/api";
+
+export default function ScoreVerdict({
+  scaleResults,
+  totalScore,
+  dni,
+  scaleName,
+  scaleSphere,
+}) {
+  async function handleSave(e) {
+    e.preventDefault();
+    console.log(scaleSphere);
+    const response = addResult({
+      user_id: dni,
+      name: scaleName,
+      sphere: scaleSphere,
+      total: totalScore,
+    });
+    if (response) {
+      console.log("Guardado");
+    } else {
+      console.log("Error");
+    }
+  }
+
   return (
     Object.entries(scaleResults).length !== 0 && (
       <section
@@ -39,6 +63,12 @@ export default function ScoreVerdict({ scaleResults, totalScore }) {
             );
           })}
         </div>
+        <button
+          className="bg-med-blue hover:bg-med-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          onClick={handleSave}
+        >
+          Guardar
+        </button>
       </section>
     )
   );
