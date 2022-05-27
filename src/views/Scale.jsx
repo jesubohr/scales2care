@@ -93,12 +93,14 @@ function Scale() {
         <ScaleScoreContext.Provider value={TotalScore}>
           {scaleQuestions.length !== 0 &&
             scaleQuestions.map(
-              ({ question, answers, instruction, example, group, questions }, index) => 
-              {
+              (
+                { question, answers, instruction, example, group, questions },
+                index
+              ) => {
                 if (!group) {
                   return (
                     <UngroupedScale
-                      key={index}
+                      key={"ungrouped-" + index}
                       index={index}
                       question={question}
                       answers={answers}
@@ -109,7 +111,7 @@ function Scale() {
                 } else {
                   return (
                     <GroupedScale
-                      key={index}
+                      key={"grouped-" + index}
                       index={index}
                       scaleQuestions={scaleQuestions}
                       group={group}
@@ -128,8 +130,9 @@ function Scale() {
           dni={dni}
           scaleName={scaleName}
           scaleSphere={
-            categoryPerScale.find((item) => item.scaleId === scaleIndex)
-              ?.category ?? "No definido"
+            categoryPerScale.find((item) => {
+              return item.scaleId === scaleIndex;
+            })?.category ?? "No definido"
           }
         />
       ) : (

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Icon from "./Icon";
 import { addResult } from "../utils/api";
+import toast from "react-hot-toast";
 
 export default function ScoreVerdict({
   scaleResults,
@@ -8,19 +10,20 @@ export default function ScoreVerdict({
   scaleName,
   scaleSphere,
 }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   async function handleSave(e) {
     e.preventDefault();
-    console.log(scaleSphere);
-    const response = addResult({
-      user_id: dni,
+    const response = await addResult({
+      dni,
       name: scaleName,
       sphere: scaleSphere,
       total: totalScore,
     });
     if (response) {
-      console.log("Guardado");
+      setIsSubmitting(true);
     } else {
-      console.log("Error");
+      throw new Error("Error al guardar resultado");
     }
   }
 
@@ -63,12 +66,21 @@ export default function ScoreVerdict({
             );
           })}
         </div>
-        <button
-          className="bg-med-blue hover:bg-med-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          onClick={handleSave}
-        >
-          Guardar
-        </button>
+        {!isSubmitting ? (
+          <button
+            className="bg-med-blue hover:bg-med-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            onClick={(e) => {
+              const promise = handleSave(e);
+              toast.promise(promise, {
+                loading: "Añadiendo...",
+                success: "Resultado añadido!",
+                error: "Error al añadir resultado",
+              });
+            }}
+          >
+            Guardar
+          </button>
+        ) : null}
       </section>
     )
   );
