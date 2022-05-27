@@ -16,13 +16,17 @@ export async function addUser({ dni }) {
 export async function addResult({ dni, name, sphere, total }) {
   try {
     const response = await axios.post(`${endpoint}/scalesResults`, {
-      dni,
+      user_id: dni,
       name,
       sphere,
       total,
     });
+
     if (response.status === 200) {
+      console.log("result added");
       return true;
+    } else {
+      return false;
     }
   } catch (error) {
     return false;

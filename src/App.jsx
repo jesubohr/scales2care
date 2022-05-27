@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useLocation, useParams, useNavigate } from "react-router-dom";
 import AppHeader from "./components/AppHeader";
-
+import { Toaster } from "react-hot-toast";
 function getCurrentPath(pathname) {
   const paths = pathname
     .split("/")
@@ -25,6 +25,7 @@ function App() {
   return (
     <>
       <AppHeader />
+      <Toaster />
       <Outlet />
     </>
   );

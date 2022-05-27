@@ -129,6 +129,7 @@ export const categoryPerScale = [
   { scaleName: nameScales[2], scaleId: 2, category: "Componente Triple" },
   { scaleName: nameScales[1], scaleId: 1, category: "Componente Triple" },
   { scaleName: nameScales[16], scaleId: 16, category: "Componente Triple" },
+  { scaleName: nameScales[4], scaleId: 4, category: "Componente Social" },
 ];
 
 export const scalesResults = [

@@ -99,10 +99,10 @@ function Scale() {
                 { question, answers, instruction, example, group, questions },
                 index
               ) => {
-                console.log(TotalScore);
                 if (!group) {
                   return (
                     <UngroupedScale
+                      key={"ungrouped-" + index}
                       index={index}
                       question={question}
                       answers={answers}
@@ -113,6 +113,7 @@ function Scale() {
                 } else {
                   return (
                     <GroupedScale
+                      key={"grouped-" + index}
                       index={index}
                       scaleQuestions={scaleQuestions}
                       group={group}
@@ -131,8 +132,9 @@ function Scale() {
           dni={dni}
           scaleName={scaleName}
           scaleSphere={
-            categoryPerScale.find((item) => item.scaleId === scaleIndex)
-              ?.category ?? "No definido"
+            categoryPerScale.find((item) => {
+              return item.scaleId === scaleIndex;
+            })?.category ?? "No definido"
           }
         />
       ) : (
