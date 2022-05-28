@@ -54,7 +54,7 @@ export default function AsideMenu({ closeAsideMenu }) {
           href="/app/history"
           onClick={() => closeAsideMenu(false)}
         >
-          <Icon icon="star" viewBox="24" />
+          <Icon icon="book" viewBox="24" />
         </AsideButton>
       </section>
     </aside>

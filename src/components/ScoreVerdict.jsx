@@ -11,19 +11,33 @@ export default function ScoreVerdict({
   scaleSphere,
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   async function handleSave(e) {
     e.preventDefault();
-    const response = await addResult({
-      dni,
-      name: scaleName,
-      sphere: scaleSphere,
-      total: totalScore,
+
+    console.log(scaleResults);
+    console.log(totalScore);
+    const interpretation = scaleResults.results.find(({ min, max }) => {
+      return min <= totalScore && totalScore <= max;
     });
-    if (response) {
-      setIsSubmitting(true);
+
+    if (!interpretation) {
+      toast.error(
+        "No se ha generado una interpretacion debido a que no se selecciona ninguna respuesta"
+      );
     } else {
-      throw new Error("Error al guardar resultado");
+      const response = await addResult({
+        dni,
+        name: scaleName,
+        sphere: scaleSphere,
+        total: totalScore,
+        interpretation: interpretation.result,
+      });
+      if (response) {
+        setIsSubmitting(true);
+        toast.success("Se ha guardado la interpretacion! :)");
+      } else {
+        toast.error("No se ha podido guardar la interpretacion de la escala");
+      }
     }
   }
 
@@ -69,14 +83,7 @@ export default function ScoreVerdict({
         {!isSubmitting ? (
           <button
             className="bg-med-blue hover:bg-med-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            onClick={(e) => {
-              const promise = handleSave(e);
-              toast.promise(promise, {
-                loading: "Añadiendo...",
-                success: "Resultado añadido!",
-                error: "Error al añadir resultado",
-              });
-            }}
+            onClick={handleSave}
           >
             Guardar
           </button>

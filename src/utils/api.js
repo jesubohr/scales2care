@@ -13,13 +13,14 @@ export async function addUser({ dni }) {
   }
 }
 
-export async function addResult({ dni, name, sphere, total }) {
+export async function addResult({ dni, name, sphere, total, interpretation }) {
   try {
     const response = await axios.post(`${endpoint}/scalesResults`, {
       user_id: dni,
       name,
       sphere,
       total,
+      interpretation,
     });
 
     if (response.status === 200) {
@@ -27,6 +28,17 @@ export async function addResult({ dni, name, sphere, total }) {
       return true;
     } else {
       return false;
+    }
+  } catch (error) {
+    return false;
+  }
+}
+
+export async function getResults({ dni }) {
+  try {
+    const response = await axios.get(`${endpoint}/scalesResults/${dni}`);
+    if (response.status === 200) {
+      return response.data.data;
     }
   } catch (error) {
     return false;

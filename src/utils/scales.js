@@ -52,8 +52,8 @@ export const scalesPerCategory = {
     { scaleName: nameScales[14], scaleId: 14 },
     { scaleName: nameScales[3], scaleId: 3 },
   ],
-  "Social": [{ scaleName: nameScales[4], scaleId: 4 }],
-  "Triple": [
+  Social: [{ scaleName: nameScales[4], scaleId: 4 }],
+  Triple: [
     { scaleName: nameScales[2], scaleId: 2 },
     { scaleName: nameScales[1], scaleId: 1 },
     { scaleName: nameScales[16], scaleId: 16 },
@@ -129,6 +129,7 @@ export const categoryPerScale = [
   { scaleName: nameScales[2], scaleId: 2, category: "Triple" },
   { scaleName: nameScales[1], scaleId: 1, category: "Triple" },
   { scaleName: nameScales[16], scaleId: 16, category: "Triple" },
+  { scaleName: nameScales[4], scaleId: 4, category: "Social" },
 ];
 
 export const scalesResults = [
