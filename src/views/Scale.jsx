@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import MainContent from "../components/MainContent";
 import ScaleQuestion from "../components/ScaleQuestion";
 import ScoreVerdict from "../components/ScoreVerdict";
-
 import Title from "../components/Title";
-
 import RegisterUser from "../components/RegisterUser";
 import {
   nameScales,

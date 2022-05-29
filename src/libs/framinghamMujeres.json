@@ -4,19 +4,6 @@
   "sphere": "BIOLOGICA",
   "questions": [
     {
-      "question": "Sexo",
-      "answers": [
-        {
-          "answer": "Hombre.",
-          "value": "H"
-        },
-        {
-          "answer": "Mujer.",
-          "value": "M"
-        }
-      ]
-    },
-    {
       "question": "Hipertrofia ventricular izquierda.",
       "answers": [
         {

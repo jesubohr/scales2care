@@ -12,6 +12,7 @@ import Category from "./views/Category";
 import Categories from "./views/Categories";
 import Favorites from "./views/Favorites";
 import History from "./views/History";
+import FraminghamScale from "./views/FraminghamScale";
 
 import "./index.css";
 
@@ -30,6 +31,7 @@ ReactDOM.render(
           </Route>
           <Route path="scales" element={<Scales />} />
           <Route path="scales">
+            <Route path="9" element={<FraminghamScale />} />
             <Route path=":scaleId" element={<Scale />} />
           </Route>
           <Route path="favorites" element={<Favorites />} />

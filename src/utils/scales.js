@@ -13,7 +13,8 @@ import * as Cam from "../libs/camScale";
 import * as Caprini from "../libs/capriniScale";
 import * as MiniMental from "../libs/miniMentalScale";
 import * as Cage from "../libs/cageScale";
-import * as Framingham from "../libs/framinghamScale";
+import FraminghamHombre from "../libs/framinghamHombres.json";
+import FraminghamMujer from "../libs/framinghamMujeres.json";
 
 export const nameScales = [
   "Nutritional Assessment Short Form",
@@ -141,7 +142,7 @@ export const scalesResults = [
   Braden.bradenResults,
   Edimburgo.edimburgoResults,
   {},
-  {},
+  [FraminghamHombre.interpretations, FraminghamMujer.interpretations],
   Cam.camResults,
   Hasbled.hasbledResults,
   Padua.paduaResults,
@@ -161,7 +162,7 @@ export const scalesQuestions = [
   Braden.bradenQuestions,
   Edimburgo.edimburgoQuestions,
   [],
-  [],
+  [FraminghamHombre.questions, FraminghamMujer.questions],
   Cam.camQuestions,
   Hasbled.hasbledQuestions,
   Padua.paduaQuestions,

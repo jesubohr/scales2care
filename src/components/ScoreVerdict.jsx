@@ -61,20 +61,22 @@ export default function ScoreVerdict({
         <p className="mb-10 text-2xl leading-none text-center font-medium">
           {scaleResults.titles[1]}
         </p>
-        <div className="max-w-sm flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           {scaleResults.results.map(({ min, max, result }, index) => {
             return (
               <p
                 key={index}
                 className={
-                  "flex items-center gap-2 text-lg" +
+                  "flex items-center gap-2 text-lg " +
                   (min <= totalScore && totalScore <= max
-                    ? " text-med-blue font-medium"
+                    ? "text-med-blue font-medium"
                     : "")
                 }
               >
-                {min - max == 0 ? min : `${min} - ${max}`}
-                <Icon icon="arrow-right" />
+                <span className="min-w-fit">
+                  {min - max === 0 ? min : `${min} - ${max}`}
+                </span>
+                <Icon icon="arrow-right" size="16" />
                 {result}
               </p>
             );
