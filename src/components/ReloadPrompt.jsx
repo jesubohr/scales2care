@@ -9,7 +9,6 @@ function ReloadPrompt () {
     } = useRegisterSW({
         onRegistered (register) {
             if (register) {
-                console.log(`SW Registered: ${register.active}`);
                 setInterval(() => {
                     register.update();
                 }, intervalMS);

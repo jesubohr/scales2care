@@ -13,9 +13,7 @@ export default function ScoreVerdict({
   const [isSubmitting, setIsSubmitting] = useState(false);
   async function handleSave(e) {
     e.preventDefault();
-
-    console.log(scaleResults);
-    console.log(totalScore);
+    
     const interpretation = scaleResults.results.find(({ min, max }) => {
       return min <= totalScore && totalScore <= max;
     });

@@ -24,7 +24,6 @@ export async function addResult({ dni, name, sphere, total, interpretation }) {
     });
 
     if (response.status === 200) {
-      console.log("result added");
       return true;
     } else {
       return false;
