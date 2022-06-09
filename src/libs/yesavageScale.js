@@ -4,11 +4,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 1,
+                value: 0,
             },
             {
                 answer: "No",
-                value: 0,
+                value: 1,
             },
         ],
     },
@@ -17,11 +17,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -30,11 +30,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -43,11 +43,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -56,11 +56,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 1,
+                value: 0,
             },
             {
                 answer: "No",
-                value: 0,
+                value: 1,
             },
         ],
     },
@@ -69,11 +69,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -82,11 +82,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 1,
+                value: 0,
             },
             {
                 answer: "No",
-                value: 0,
+                value: 1,
             },
         ],
     },
@@ -95,11 +95,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -108,11 +108,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -121,11 +121,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -134,11 +134,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 1,
+                value: 0,
             },
             {
                 answer: "No",
-                value: 0,
+                value: 1,
             },
         ],
     },
@@ -147,11 +147,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -160,11 +160,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
@@ -173,11 +173,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 1,
+                value: 0,
             },
             {
                 answer: "No",
-                value: 0,
+                value: 1,
             },
         ],
     },
@@ -186,11 +186,11 @@ export const yesavageQuestions = [
         answers: [
             {
                 answer: "Si",
-                value: 0,
+                value: 1,
             },
             {
                 answer: "No",
-                value: 1,
+                value: 0,
             },
         ],
     },
