@@ -8,11 +8,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 1
+          "value": 0
         },
         {
           "answer": "No",
-          "value": 0
+          "value": 1
         }
       ]
     },
@@ -21,11 +21,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -34,11 +34,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -47,11 +47,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -60,11 +60,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 1
+          "value": 0
         },
         {
           "answer": "No",
-          "value": 0
+          "value": 1
         }
       ]
     },
@@ -73,11 +73,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -86,11 +86,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 1
+          "value": 0
         },
         {
           "answer": "No",
-          "value": 0
+          "value": 1
         }
       ]
     },
@@ -99,11 +99,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -112,11 +112,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -125,11 +125,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -138,11 +138,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 1
+          "value": 0
         },
         {
           "answer": "No",
-          "value": 0
+          "value": 1
         }
       ]
     },
@@ -151,11 +151,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -164,11 +164,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     },
@@ -177,11 +177,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 1
+          "value": 0
         },
         {
           "answer": "No",
-          "value": 0
+          "value": 1
         }
       ]
     },
@@ -190,11 +190,11 @@
       "answers": [
         {
           "answer": "Si",
-          "value": 0
+          "value": 1
         },
         {
           "answer": "No",
-          "value": 1
+          "value": 0
         }
       ]
     }
