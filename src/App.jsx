@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     if (currentPath === "App") navigate("/app/categories");
     if (currentPath === "Scale") navigate("/app/scales");
-    if (scaleId < 0 || scaleId >= 17) navigate("/app/scales");
+    if (scaleId < 0 || scaleId >= 16) navigate("/app/scales");
   }, []);
 
   return (

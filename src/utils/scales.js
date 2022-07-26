@@ -24,7 +24,6 @@ export const nameScales = [
   "Escala Gijon",
   "Escala Braden",
   "Cuestionario de Edimburgo",
-  "SCORE",
   "Escala Framingham",
   "CAM",
   "Escala Has-bled",
@@ -38,26 +37,25 @@ export const nameScales = [
 export const scalesPerCategory = {
   "Biológica o Clínica": [
     { scaleName: nameScales[0], scaleId: 0 },
+    { scaleName: nameScales[9], scaleId: 9 },
     { scaleName: nameScales[10], scaleId: 10 },
     { scaleName: nameScales[11], scaleId: 11 },
-    { scaleName: nameScales[12], scaleId: 12 },
-    { scaleName: nameScales[15], scaleId: 15 },
+    { scaleName: nameScales[14], scaleId: 14 },
     { scaleName: nameScales[7], scaleId: 7 },
-    { scaleName: nameScales[8], scaleId: 8 },
     { scaleName: nameScales[6], scaleId: 6 },
-    { scaleName: nameScales[13], scaleId: 13 },
+    { scaleName: nameScales[12], scaleId: 12 },
     { scaleName: nameScales[5], scaleId: 5 },
   ],
   "Psicológica o Mental": [
-    { scaleName: nameScales[9], scaleId: 9 },
-    { scaleName: nameScales[14], scaleId: 14 },
+    { scaleName: nameScales[8], scaleId: 8 },
+    { scaleName: nameScales[13], scaleId: 13 },
     { scaleName: nameScales[3], scaleId: 3 },
   ],
   Social: [{ scaleName: nameScales[4], scaleId: 4 }],
   Triple: [
     { scaleName: nameScales[2], scaleId: 2 },
     { scaleName: nameScales[1], scaleId: 1 },
-    { scaleName: nameScales[16], scaleId: 16 },
+    { scaleName: nameScales[15], scaleId: 15 },
   ],
 };
 
@@ -65,6 +63,11 @@ export const categoryPerScale = [
   {
     scaleName: nameScales[0],
     scaleId: 0,
+    category: "Biológica o Clínica",
+  },
+  {
+    scaleName: nameScales[9],
+    scaleId: 9,
     category: "Biológica o Clínica",
   },
   {
@@ -78,13 +81,8 @@ export const categoryPerScale = [
     category: "Biológica o Clínica",
   },
   {
-    scaleName: nameScales[12],
-    scaleId: 12,
-    category: "Biológica o Clínica",
-  },
-  {
-    scaleName: nameScales[15],
-    scaleId: 15,
+    scaleName: nameScales[14],
+    scaleId: 14,
     category: "Biológica o Clínica",
   },
   {
@@ -93,18 +91,13 @@ export const categoryPerScale = [
     category: "Biológica o Clínica",
   },
   {
-    scaleName: nameScales[8],
-    scaleId: 8,
-    category: "Biológica o Clínica",
-  },
-  {
     scaleName: nameScales[6],
     scaleId: 6,
     category: "Biológica o Clínica",
   },
   {
-    scaleName: nameScales[13],
-    scaleId: 13,
+    scaleName: nameScales[12],
+    scaleId: 12,
     category: "Biológica o Clínica",
   },
   {
@@ -113,13 +106,13 @@ export const categoryPerScale = [
     category: "Biológica o Clínica",
   },
   {
-    scaleName: nameScales[9],
-    scaleId: 9,
+    scaleName: nameScales[8],
+    scaleId: 8,
     category: "Psicológica o Mental",
   },
   {
-    scaleName: nameScales[14],
-    scaleId: 14,
+    scaleName: nameScales[13],
+    scaleId: 13,
     category: "Psicológica o Mental",
   },
   {
@@ -129,7 +122,7 @@ export const categoryPerScale = [
   },
   { scaleName: nameScales[2], scaleId: 2, category: "Triple" },
   { scaleName: nameScales[1], scaleId: 1, category: "Triple" },
-  { scaleName: nameScales[16], scaleId: 16, category: "Triple" },
+  { scaleName: nameScales[15], scaleId: 15, category: "Triple" },
   { scaleName: nameScales[4], scaleId: 4, category: "Social" },
 ];
 
@@ -141,7 +134,6 @@ export const scalesResults = [
   Gijon.gijonResults,
   Braden.bradenResults,
   Edimburgo.edimburgoResults,
-  {},
   [FraminghamHombre.interpretations, FraminghamMujer.interpretations],
   Cam.camResults,
   Hasbled.hasbledResults,
@@ -161,7 +153,6 @@ export const scalesQuestions = [
   Gijon.gijonQuestions,
   Braden.bradenQuestions,
   Edimburgo.edimburgoQuestions,
-  [],
   [FraminghamHombre.questions, FraminghamMujer.questions],
   Cam.camQuestions,
   Hasbled.hasbledQuestions,
