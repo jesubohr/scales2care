@@ -52,11 +52,7 @@ function UngroupedScale({ index, question, answers, instruction, example }) {
     <div className="w-full max-w-3xl text-gray-800 dark:text-gray-200">
       {instruction ? <p className="mb-2">{instruction}</p> : null}
       {example ? <p className="mb-5">{example}</p> : null}
-      <ScaleQuestion
-        index={index}
-        question={question}
-        answers={answers}
-      />
+      <ScaleQuestion index={index} question={question} answers={answers} />
     </div>
   );
 }
@@ -121,21 +117,21 @@ function Scale() {
             )}
         </ScaleScoreContext.Provider>
       </section>
-      {dni ? (
-        <ScoreVerdict
-          scaleResults={scaleResults}
-          totalScore={scores.reduce((acc, { score }) => acc + score, 0)}
-          dni={dni}
-          scaleName={scaleName}
-          scaleSphere={
-            categoryPerScale.find((item) => {
-              return item.scaleId === scaleIndex;
-            })?.category ?? "No definido"
-          }
-        />
-      ) : (
+      {/*dni ? (*/}
+      <ScoreVerdict
+        scaleResults={scaleResults}
+        totalScore={scores.reduce((acc, { score }) => acc + score, 0)}
+        dni={dni}
+        scaleName={scaleName}
+        scaleSphere={
+          categoryPerScale.find((item) => {
+            return item.scaleId === scaleIndex;
+          })?.category ?? "No definido"
+        }
+      />
+      {/*}) : (
         <RegisterUser setDni={setDni} />
-      )}
+      )}*/}
     </MainContent>
   );
 }

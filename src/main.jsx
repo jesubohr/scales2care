@@ -35,7 +35,7 @@ ReactDOM.render(
             <Route path=":scaleId" element={<Scale />} />
           </Route>
           <Route path="favorites" element={<Favorites />} />
-          <Route path="history" element={<History />} />
+          {/*<Route path="history" element={<History />} />*/}
         </Route>
       </Routes>
     </BrowserRouter>

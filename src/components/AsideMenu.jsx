@@ -49,13 +49,13 @@ export default function AsideMenu({ closeAsideMenu }) {
         >
           <Icon icon="star" viewBox="24" />
         </AsideButton>
-        <AsideButton
+        {/*<AsideButton
           title="Historial"
           href="/app/history"
           onClick={() => closeAsideMenu(false)}
         >
           <Icon icon="book" viewBox="24" />
-        </AsideButton>
+    </AsideButton>*/}
       </section>
     </aside>
   );

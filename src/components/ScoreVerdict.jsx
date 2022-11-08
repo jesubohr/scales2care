@@ -13,7 +13,7 @@ export default function ScoreVerdict({
   const [isSubmitting, setIsSubmitting] = useState(false);
   async function handleSave(e) {
     e.preventDefault();
-    
+
     const interpretation = scaleResults.results.find(({ min, max }) => {
       return min <= totalScore && totalScore <= max;
     });
@@ -80,14 +80,6 @@ export default function ScoreVerdict({
             );
           })}
         </div>
-        {!isSubmitting ? (
-          <button
-            className="bg-med-blue hover:bg-med-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            onClick={handleSave}
-          >
-            Guardar
-          </button>
-        ) : null}
       </section>
     )
   );
