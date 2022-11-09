@@ -34,6 +34,26 @@ export const nameScales = [
   "Cuestionario CAGE",
   "Escala Morse",
 ];
+
+export const scalesDescriptions = [
+  "Nutritional Assessment Short Form",
+  "Índice de Barthel",
+  "Escala de Lawton y Brody",
+  "Escala Yessavage",
+  "Escala Gijon",
+  "Escala Braden",
+  "Cuestionario de Edimburgo",
+  "Escala Framingham",
+  "CAM",
+  "Escala Has-bled",
+  "Escala Padua",
+  "Escala Caprini",
+  "Índice de Comorbilidades de Charlson",
+  "Mini-Mental State Examination",
+  "Cuestionario CAGE",
+  "Escala Morse",
+];
+
 export const scalesPerCategory = {
   "Biológica o Clínica": [
     { scaleName: nameScales[0], scaleId: 0 },
