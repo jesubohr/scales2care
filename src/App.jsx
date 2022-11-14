@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Outlet, useLocation, useParams, useNavigate } from "react-router-dom";
 import AppHeader from "./components/AppHeader";
 import { Toaster } from "react-hot-toast";
+import { ModalProvider } from "react-context-modals";
+import "react-context-modals/dist/main.css";
 function getCurrentPath(pathname) {
   const paths = pathname
     .split("/")
@@ -24,9 +26,11 @@ function App() {
 
   return (
     <>
-      <AppHeader />
-      <Toaster />
-      <Outlet />
+      <ModalProvider>
+        <AppHeader />
+        <Toaster />
+        <Outlet />
+      </ModalProvider>
     </>
   );
 }
