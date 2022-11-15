@@ -3,13 +3,7 @@ import Icon from "./Icon";
 import { addResult } from "../utils/api";
 import toast from "react-hot-toast";
 
-export default function ScoreVerdict({
-  scaleResults,
-  totalScore,
-  dni,
-  scaleName,
-  scaleSphere,
-}) {
+export default function ScoreVerdict({ scaleResults, totalScore, dni, scaleName, scaleSphere }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   async function handleSave(e) {
     e.preventDefault();

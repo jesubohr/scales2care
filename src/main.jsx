@@ -31,7 +31,7 @@ ReactDOM.render(
           </Route>
           <Route path="scales" element={<Scales />} />
           <Route path="scales">
-            <Route path="9" element={<FraminghamScale />} />
+            <Route path="8" element={<FraminghamScale />} />
             <Route path=":scaleId" element={<Scale />} />
           </Route>
           <Route path="favorites" element={<Favorites />} />

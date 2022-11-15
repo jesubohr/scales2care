@@ -28,28 +28,18 @@ export default function ScaleButton({
   return (
     <div
       className={
-        "flex items-center justify-between gap-4" +
-        " px-5 " +
+        "flex items-center justify-start gap-2.5 px-3 py-2 " +
         "max-w-xs sm:max-w-md md:max-w-none w-full md:w-fit rounded " +
         "text-base sm:text-2xl md:text-2xl " +
         "text-gray-900 dark:text-gray-50 font-medium " +
         "backdrop-blur-sm backdrop-brightness-50 backdrop-opacity-10 dark:backdrop-brightness-200 dark:backdrop-opacity-60 " +
-        `border-4 ${className}`
+        `border-4 cursor-pointer ${className}`
       }
     >
-      <div className="my-2 flex gap-1">
         <InfoCircleButton onClick={showBasicModal} />
-        <button
-          title={`Ir a escala: ${name}`}
-          className="grow md:grow-0 w-max h-full text-left font-light"
-          onClick={() => {
-            navigate(`/app/scales/${id + 1}`);
-          }}
-        >
-          {name}
-        </button>
-      </div>
-      <FavoriteButton id={id} />
+        <span onClick={() => navigate(`/app/scales/${id + 1}`) }>{name}</span>
+        <div className="grow" onClick={() => navigate(`/app/scales/${id + 1}`) }></div>
+        <FavoriteButton id={id} className="justify-self-end" />
     </div>
   );
 }

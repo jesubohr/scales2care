@@ -162,28 +162,28 @@
   "interpretations": {
     "results": [
       {
-        "min": -2,
-        "max": 2,
+        "min": -9999,
+        "max": 5,
         "result": "Bajo riesgo."
       },
       {
-        "min": 3,
-        "max": 5,
+        "min": 5,
+        "max": 9,
         "result": "Riesgo ligero."
       },
       {
-        "min": 6,
-        "max": 8,
+        "min": 10,
+        "max": 19,
         "result": "Riesgo moderado."
       },
       {
-        "min": 9,
-        "max": 12,
+        "min": 20,
+        "max": 39,
         "result": "Riesgo alto."
       },
       {
-        "min": 13,
-        "max": 19,
+        "min": 39,
+        "max": 9999,
         "result": "Riesgo muy alto."
       }
     ],

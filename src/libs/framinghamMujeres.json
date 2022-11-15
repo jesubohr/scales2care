@@ -162,29 +162,29 @@
   "interpretations": {
     "results": [
       {
-        "min": -2,
+        "min": -9999,
         "max": 5,
         "result": "Riesgo bajo."
       },
       {
-        "min": 6,
+        "min": 5,
         "max": 9,
         "result": "Riesgo ligero."
       },
       {
         "min": 10,
-        "max": 14,
+        "max": 19,
         "result": "Riesgo moderado."
       },
       {
-        "min": 15,
-        "max": 24,
+        "min": 20,
+        "max": 39,
         "result": "Riesgo alto."
       },
       {
-        "min": 19,
-        "max": 23,
-        "result": "Sin riesgo de desarrollar úlceras por presión."
+        "min": 39,
+        "max": 9999,
+        "result": "Riesgo muy alto."
       }
     ],
     "titles": ["Resultado", "Riesgo coronario a 10 años."]

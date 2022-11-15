@@ -11,7 +11,7 @@ export default function Scales() {
   return (
     <MainContent>
       <Title>Lista de Escalas</Title>
-      <section className="grid md:flex flex-wrap justify-center gap-5">
+      <section className="flex flex-wrap justify-center gap-5">
         {nameScales.map((name, index) => {
           return (
             <ScaleButton
